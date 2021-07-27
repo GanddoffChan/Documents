@@ -1,0 +1,130 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{geometry}
+\newcommand{\pp}{p\text{-value}}
+
+\begin{document}
+\section{}
+\[H_0:\text{gender and the dominant leadership style are independent}\]
+\begin{center}against\end{center}
+\[H_a:\text{gender and the dominant leadership style are dependent}\]
+\[\begin{array}{|c|ccc|c|}
+    \hline
+    \text{Gender}   &\text{Authoritarian}   &\text{Democratic}  &\text{Laissez-faire}   &\text{total}\\
+    \hline
+    \text{Male}     &12                     &22                 &9                      &43\\
+    \text{Female}   &20                     &13                 &3                      &36\\
+    \hline
+    \text{total}    &32                     &35                 &12                     &79\\
+    \hline
+\end{array}\]
+Under \(H_0\),
+\[\nu=(2-1)(3-1)=(1)(2)=2\]
+\[O=\{12,22,9,20,13,3\}\]
+\[E=\left\{\frac{1376}{79},\frac{1505}{79},\frac{516}{79},\frac{1152}{79},\frac{1260}{79},\frac{432}{79}\right\}\]
+The test statistic \(\sum\frac{(O_i-E_i)^2}{E_i}\sim\chi^2(2)\).
+\[\chi^2_\text{calc}\approx6.75\]
+\[\pp=P\left(\sum\frac{(O_i-E_i)^2}{E_i}\geqslant\chi^2_\text{calc}\right)\approx0.0343\]
+Since \(\pp\approx0\), there is some evidence for the rejection of \(H_0\). Moreover, from the largest contributors to the test statistic, Males and Females who are identified as Authoritarian dominant, we can see that there are more females than males, contrary to the total number of males and females. Therefore, we conclude that there is sufficient evidence that gender and the dominant leadership style are dependent.
+
+\section{(a)}
+\subsection*{(i)}
+\[\bar x=\frac{\sum fx}{\sum f}=1.33\]
+\[H_0:\text{the data follows a Poisson distribution}\]
+\begin{center}against\end{center}
+\[H_a:\text{the data does not follow a Poisson distribution}\]
+Under \(H_0\),
+\[\nu=(6-1)-1=4\]
+\[O=\{24,36,28,8,3,1\}\]
+\[E=\left\{e^{-1.33},1.33e^{-1.33},\frac{1.33^2e^{-1.33}}2,\frac{1.33^3e^{-1.33}}6,\frac{1.33^4e^{-1.33}}{24},\frac{1.33^5e^{-1.33}}{120}\right\}\]
+The test statistic \(\sum\frac{(O_i-E_i)^2}{E_i}\sim\chi^2(2)\).
+\[\chi^2_\text{calc}\approx1.76\]
+\[\pp=P\left(\sum\frac{(O_i-E_i)^2}{E_i}\geqslant\chi^2_\text{calc}\right)\approx0.780\]
+Since \(\pp>5\%\), we do not reject \(H_0\), and conclude that there is insufficient evidence at a 5\% level that the data does not follow a Poisson distribution.
+\subsection*{(ii)}
+\[H_0:\text{the data follows a Poisson distribution with mean 1.33}\]
+\begin{center}against\end{center}
+\[H_a:\text{the data does not follow a Poisson distribution with mean 1.33}\]
+Under \(H_0\),
+\[\nu=6-1=5\]
+\[\vdots\]
+
+\section*{(b)}
+\[H_0:\text{there is no association between the channel watched most and the region}\]
+\begin{center}against\end{center}
+\[H_a:\text{there is association between the channel watched most and the region}\]
+\[\begin{array}{|c|cccc|c|}
+    \hline
+    \text{Region}       &\text{North}   &\text{South}   &\text{East}    &\text{West}    &\text{total}\\
+    \hline
+    \text{Channel 5}    &10             &17             &10+a           &23-a           &60\\
+    \text{Channel 8}    &5              &8              &20-a           &7+a            &40\\
+    \hline
+    \text{total}        &15             &25             &30             &30             &100\\
+    \hline
+\end{array}\]
+Under \(H_0\),
+\[\nu=(2-1)(4-1)=(1)(3)=3\]
+\[O=\{10,17,10+a,23-a,5,8,20-a,7+a\}\]
+\[E=\{9,15,18,18,6,10,12,12\}\]
+The test statistic \(\sum\frac{(O_i-E_i)^2}{E_i}\sim\chi^2(3)\).
+\[\begin{aligned}
+    \chi^2_\text{calc}&=\frac19+\frac4{15}+\frac{(a-8)^2}{18}+\frac{(a-5)^2}{18}+\frac16+\frac25+\frac{(a-8)^2}{12}+\frac{(a-5)^2}{12}\\
+    &=\frac{34}{36}+\frac5{36}\left(a^2-16a+64+a^2-10a+25\right)\\
+    &=\frac{10a^2-130a+479}{36}\qed
+\end{aligned}\]
+\[\begin{aligned}
+    \pp&>5\%\\
+    P\left(\sum\frac{(O_i-E_i)^2}{E_i}\geqslant\chi^2_\text{calc}\right)&>0.05\\
+    \frac{10a^2-130a+479}{36}&<c\\
+    10a^2-130a+479-36c&<0
+\end{aligned}\]
+\[a\in(1.76,11.2)\]
+
+\section*3
+\subsection*{(i)}
+\[\begin{aligned}
+    \chi^2_\text{calc}&=\frac{(a-np_1)^2}{np_1}+\frac{(b-np_2)^2}{np_2}+\frac{(c-np_3)^2}{np_3}+\frac{(d-np_4)^2}{np_4}\\
+    &=\frac{a^2-2anp_1+n^2p_1^2}{np_1}+\frac{b^2-2bnp_2+n^2p_2^2}{np_2}+\frac{c^2-2cnp_3+n^2p_3^2}{np_3}+\frac{d^2-2dnp_4+n^2p_4^2}{np_4}\\
+    &=\frac{a^2}{np_1}+\frac{b^2}{np_2}+\frac{c^2}{np_3}+\frac{d^2}{np_4}-2(a+b+c+d)+n(p_1+p_2+p_3+p_4)\\
+    &=\frac{a^2}{np_1}+\frac{b^2}{np_2}+\frac{c^2}{np_3}+\frac{d^2}{np_4}-n\qed
+\end{aligned}\]
+\subsection{(ii)}
+
+\[n=26+19+10+45=100\]
+\[\begin{aligned}
+    p_1+p_2+p_3+p_4&=1\\
+    p+3p_3+p_3+p&=1\\
+    4p_3&=1-2p\\
+    p_3&=\frac{1-2p}4
+\end{aligned}\]
+\[\begin{aligned}
+    \chi^2_\text{calc}&=\frac{26^2}{100p}+\frac{19^2}{100\cdot3(1-2p)/4}+\frac{10^2}{100(1-2p)/4}+\frac{45^2}{100p}-100\\
+    &=\frac{676}{100p}+\frac{361}{75(1-2p)}+\frac{300}{75(1-2p)}+\frac{2025}{100p}-100\\
+    &=\frac{2701}{100p}+\frac{661}{75(1-2p)}-100\\
+\end{aligned}\]
+\[p_0\approx\boxed{0.356}\]
+\subsection*{(iii)}
+\[H_0:\text{the population of the city in the country conforms to the figures}\]
+\begin{center}against\end{center}
+\[H_a:\text{the population of the city in the country does not conform to the figures}\]
+Under \(H_0\),
+\[\nu=4-1=3\]
+\[O=\{26,19,10,45\}\]
+\[E=\left\{100p_0,75-150p_0,25-50p_0,100p_0\right\}\]
+The test statistic \(\sum\frac{(O_i-E_i)^2}{E_i}\sim\chi^2(3)\).
+\[\chi^2_\text{calc}\approx6.47\]
+\[\pp=P\left(\sum\frac{(O_i-E_i)^2}{E_i}\geqslant\chi^2_\text{calc}\right)\approx0.0907\]
+Since \(\pp<10\%\), we reject \(H_0\), and conclude that there is sufficient evidence at a 10\% level that the population of the city in the country does not conform to the figures.
+\subsection*{(iv)}
+\(H_0\) will be rejected because other values of \(p\) will lead to a greater test statistic, making \(\pp\) smaller.
+
+\subsection*{(v)}
+\[(0.174,0.346)\]
+(I forget everything about CI...)
+
+\subsection*{(vi)}
+Advantage: the range of the interval is smaller, giving more precision to the actual value of the proportion.
+
+Disadvantage: the interval is less likely to contain the actual value.
+\end{document}

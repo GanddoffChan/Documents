@@ -1,0 +1,237 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{geometry}
+\newcommand{\vv}{\mathbf}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\spn}{\mathrm{span}}
+\newcommand{\col}{\mathrm{col}}
+\newcommand{\range}{\mathrm{range}}
+
+\begin{document}
+
+\section*{1}
+\subsection*{(i)}
+
+Let the characteristic polynomial of \(\vv A\) be \(p(\lambda)\).
+
+\[\begin{aligned}
+	p(\lambda)&=\det(\lambda\vv I-\vv A)\\
+	&=\det\left(\begin{bmatrix}
+			\lambda-1&-c&-3\\
+			-4&\lambda-1&0\\
+			-3&0&\lambda-1
+	\end{bmatrix}\right)\\
+	&=(\lambda-1)^2(\lambda-1)-4c(\lambda-1)-9(\lambda-1)\\
+	&=(\lambda-1)\left((\lambda-1)^2-4c-9\right)\\
+	&=(\lambda-1)\left(\lambda^2-2\lambda-4c-8\right)\\
+	&=(\lambda-1)((\lambda-6)(\lambda+4)+16-4c)\\
+	&=(\lambda+4)(\lambda-1)(\lambda-6)+(16-4c)(\lambda-1)\\
+\end{aligned}\]
+Given that \(\vv A\) has an eigenvalue of 6, \(p(\lambda)\) must be in the form of:
+\[(\lambda-\lambda_1)(\lambda-\lambda_2)(\lambda-6)\]
+Thus, \(16-4c=0\iff c=\boxed4\) and the remaining eigenvalues are
+\(\boxed{-4}\) and \(\boxed1\).
+
+\subsection*{(ii)}
+\[\ker(\vv A+4\vv I)=\ker\left(\begin{bmatrix}
+		5&4&3\\
+		4&5&0\\
+		3&0&5
+		\end{bmatrix}\right)=\ker\left(\begin{bmatrix}
+		1&0&5/3\\
+		0&1&-4/3\\
+		0&0&0
+	\end{bmatrix}\right)=\left\{\mu_1\begin{bmatrix}-5\\4\\3\end{bmatrix}:\mu_1\in\mathbb R\right\}\]
+
+\[\ker(\vv A-\vv I)=\ker\left(\begin{bmatrix}
+		0&4&3\\
+		4&0&0\\
+		3&0&0
+		\end{bmatrix}\right)=\ker\left(\begin{bmatrix}
+		1&0&0\\
+		0&1&3/4\\
+		0&0&0
+	\end{bmatrix}\right)=\left\{\mu_2\begin{bmatrix}0\\-3\\4\end{bmatrix}:\mu_2\in\mathbb R\right\}\]
+
+\[\ker(\vv A-6\vv I)=\ker\left(\begin{bmatrix}
+		-5&4&3\\
+		4&-5&0\\
+		3&0&-5
+		\end{bmatrix}\right)=\ker\left(\begin{bmatrix}
+		1&0&-5/3\\
+		0&1&-4/3\\
+		0&0&0
+	\end{bmatrix}\right)=\left\{\mu_3\begin{bmatrix}5\\4\\3\end{bmatrix}:\mu_3\in\mathbb R\right\}\]
+
+\[\vv P=\boxed{\begin{bmatrix}-5&0&5\\4&-3&4\\3&4&3\end{bmatrix}}\]
+\[\vv D=\boxed{\begin{bmatrix}-4&0&0\\0&1&0\\0&0&6\end{bmatrix}}\]
+
+\subsection*{(iii)}
+\[\begin{aligned}
+	\vv Y^\prime&=\vv A\vv Y\\
+	\vv Y^\prime&=\vv P\vv D\vv P^{-1}\vv Y\\
+	\vv P^{-1}\vv Y^\prime&=\vv D\vv P^{-1}\vv Y\\
+	\vv U^\prime&=\vv D\vv U\qed
+\end{aligned}\]
+
+\[\begin{aligned}
+	\vv U^\prime&=\vv D\vv U\\
+	\begin{bmatrix}
+		\dd u_1/\dd x\\
+		\dd u_2/\dd x\\
+		\dd u_3/\dd x
+	\end{bmatrix}
+		    &=
+		    \begin{bmatrix}
+			    -4&0&0\\
+			    0&1&0\\
+			    0&0&6
+		    \end{bmatrix}
+		    \begin{bmatrix}
+			    u_1\\
+			    u_2\\
+			    u_3
+		    \end{bmatrix}\\
+	\begin{bmatrix}
+		\dd u_1/\dd x\\
+		\dd u_2/\dd x\\
+		\dd u_3/\dd x
+	\end{bmatrix}
+		    &=
+		    \begin{bmatrix}
+			    -4u_1\\
+			    u_2\\
+			    6u_3
+		    \end{bmatrix}\\
+	\begin{bmatrix}
+		\dd u_1/u_1\\
+		\dd u_2/u_2\\
+		\dd u_3/u_3
+	\end{bmatrix}
+		    &=
+		    \begin{bmatrix}
+			    -4\,\dd x\\
+			    \,\dd x\\
+			    6\,\dd x
+		    \end{bmatrix}\\
+	\begin{bmatrix}
+		\ln|u_1|\\
+		\ln|u_2|\\
+		\ln|u_3|
+	\end{bmatrix}
+		    &=
+		    \begin{bmatrix}
+			    -4x+c_1\\
+			    x+c_2\\
+			    6x+c_3
+		    \end{bmatrix}\\
+	\begin{bmatrix}
+		u_1\\
+		u_2\\
+		u_3
+	\end{bmatrix}
+		    &=
+		    \begin{bmatrix}
+			    \exp(-4x+c_1)\\
+			    \exp(x+c_2)\\
+			    \exp(6x+c_3)
+		    \end{bmatrix}\\
+		    \vv U
+		    &=
+		    \begin{bmatrix}
+			    A_1\exp(-x)\\
+			    A_2\exp(x)\\
+			    A_3\exp(6x)
+		    \end{bmatrix}\\
+\end{aligned}\]
+
+\[\begin{aligned}
+	\vv U&=\vv P^{-1}\vv Y\\
+	\vv Y&=\vv P\vv U\\
+	\begin{bmatrix}
+		y_1\\
+		y_2\\
+		y_3
+	\end{bmatrix}&=
+	\begin{bmatrix}
+		-5&0&5\\
+		4&-3&4\\
+		3&4&3
+	\end{bmatrix}
+	\begin{bmatrix}
+	        A_1\exp(-x)\\
+	        A_2\exp(x)\\
+	        A_3\exp(6x)
+	\end{bmatrix}\\
+\end{aligned}\]
+
+\[\boxed{\begin{cases}
+		y_1=-5A_1e^{-x}+5A_3e^{6x}\\
+		y_2=4A_1e^{-x}-3A_2e^x+4A_3e^{6x}\\
+		y_3=3A_1e^{-x}+4A_2e^x+3A_3e^{6x}
+\end{cases},\,A_1,A_2,A_3\in\mathbb R}\]
+
+
+\section*2
+
+\subsection*{(i)}
+Let the characteristic polynomial of \(\vv A\) be \(p(x)\).
+
+\[\begin{aligned}
+	p(x)&=(x-\alpha)(x-\beta)(x-\gamma)\\
+	    &=(x-\alpha)\left(x^2-(\beta+\gamma)x+\beta\gamma\right)\\
+	    &=x^3-(\beta+\gamma)x^2+\beta\gamma x-\alpha x^2+(\alpha\beta+\gamma\alpha)x-\alpha\beta\gamma\\
+	    &=x^3-(\alpha+\beta+\gamma)x^2+(\alpha\beta+\beta\gamma+\gamma\alpha)x-\alpha\beta\gamma
+\end{aligned}\]
+
+Given \(p(x)=x^3-x^2+kx+4\),
+\[\begin{cases}
+	\alpha+\beta+\gamma=1\\
+	\alpha\beta+\beta\gamma+\gamma\alpha=k\\
+	\alpha\beta\gamma=-4
+\end{cases}\]
+
+\[\vv A=\vv P\vv D\vv P^{-1},\,
+	\vv P=\begin{bmatrix}\vv e_1&\vv e_2&\vv e_3\end{bmatrix},\,
+	\vv D=\begin{bmatrix}\alpha&0&0\\0&\beta&0\\0&0&\gamma\end{bmatrix}\]
+
+\[\begin{aligned}
+	\vv B&=\vv P\begin{bmatrix}
+		\alpha-\beta\gamma&0&0\\
+		0&\beta-\gamma\alpha&0\\
+		0&0&\gamma-\alpha\beta
+	\end{bmatrix}\vv P^{-1}\\
+	     &=\vv P\left(\begin{bmatrix}
+		\alpha&0&0\\
+		0&\beta&0\\
+		0&0&\gamma
+	\end{bmatrix}-\begin{bmatrix}
+		\beta\gamma&0&0\\
+		0&\gamma\alpha&0\\
+		0&0&\alpha\beta
+\end{bmatrix}\right)\vv P^{-1}\\
+	     &=\vv P\begin{bmatrix}
+		\alpha&0&0\\
+		0&\beta&0\\
+		0&0&\gamma
+		\end{bmatrix}\vv P^{-1}-\vv P\begin{bmatrix}
+		-4/\alpha&0&0\\
+		0&-4/\beta&0\\
+		0&0&-4/\gamma
+\end{bmatrix}\vv P^{-1}\\
+	     &=\vv P\vv D\vv P^{-1}+4\vv P\vv D^{-1}\vv P^{-1}\\
+	     &=\boxed{\vv A+4\vv A^{-1}}
+\end{aligned}\]
+
+\subsection*{(ii)}
+Consider the three eigenvalues of \(\vv B\):
+\[\alpha-\beta\gamma=\alpha-\frac{-4}\alpha=\frac1\alpha\left(\alpha^2+4\right)\ne0,\,\forall\alpha\in\mathbb R\]
+\[\beta-\gamma\alpha=\beta-\frac{-4}\beta=\frac1\beta\left(\beta^2+4\right)\ne0,\,\forall\beta\in\mathbb R\]
+\[\gamma-\alpha\beta=\gamma-\frac{-4}\gamma=\frac1\gamma\left(\gamma^2+4\right)\ne0,\,\forall\gamma\in\mathbb R\]
+Since \(\vv B\) has three non-zero eigenvalues, \(\det(\vv B)\ne0\implies\col(\vv B)=\mathbb R^3\).
+
+Since the set of three eigenvectors is linearly independent:
+\[\spn\{\vv e_1,\vv e_2,\vv e_3\}=\mathbb R^3\]
+
+Therefore, because \(\spn\{\vv e_1,\vv e_2,\vv e_3\}=\col(\vv B)=\range(T)\) and \(|\{\vv e_1,\vv e_2,\vv e_3\}|=3=\dim\left(\mathbb R^3\right)\), \(\{\vv e_1,\vv e_2,\vv e_3\}\) forms a basis for the range of \(T\).\qed
+\end{document}

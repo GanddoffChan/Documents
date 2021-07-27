@@ -1,0 +1,67 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{physics}
+\usepackage{centernot}
+
+\begin{document}
+\section*1
+\subsection*{(a)}
+\[((\neg s\land l)\lor s)\centernot\implies(s\implies\neg l)\]
+\subsection*{(b)}
+
+\section*2
+\[(a\mid b\iff b=na)\land(b\mid c\iff c=mb)\]
+    \[c=nb=n(ma)=(nm)a\iff c\mid a\qed\]
+
+\section*3
+\[x\in\mathbb Z\]
+Suppose \(2\mid x^2-1\).
+\[\begin{aligned}
+    2&\mid x^2-1\\
+    x^2-1&=2a\\
+    (x-1)(x+1)&=2a
+\end{aligned}\]
+For \((x-1)(x+1)\) to be even, \((x-1)\lor(x+1)\) must be even. Suppose \(x-1=2n\).
+\[\begin{aligned}
+    x-1&=2n\\
+    x+1&=2n+2\\
+    x+1&=2(n+1)\\
+    (x-1)(x+1)&=(2n)(2(n+1))\\
+    x^2-1&=4\left(n^2+1\right)
+\end{aligned}\]
+WLOG, same thing happens when \((x+1)\) is even or \((x-1)\land(x+1)\) are even.\qed{}
+
+\section*4
+\subsection*{(i)}
+Case 1: \(a=k,\,k\in\mathbb R^+\).
+\[a^2=aa=kk=k^2>0\]
+Case 2: \(a=-k,\,k\in\mathbb R^+\).
+\[a^2=aa=(-k)(-k)=k^2>0\]
+Case 3: \(a=0\).
+\[a^2=(0)(0)=0\]
+Thus, \(\forall a\in\mathbb R\), \(a^2\geqslant0\).\qed{}
+\subsection*{(ii)}
+\[\begin{aligned}
+    {(a-b)}^2&\geqslant0\\
+    a^2-2ab+b^2&\geqslant0\\
+    -2ab&\geqslant-\pqty{a^2+b^2}\\
+    ab&\leqslant\frac12\pqty{a^2+b^2}\qed
+\end{aligned}\]
+\subsection*{(iii)}
+\[\begin{aligned}
+    {(ca-c^{-1}b)}^2&\geqslant0\\
+    c^2a^2-2ab+c^{-2}b^2&\geqslant0\\
+    -2ab&\geqslant-\pqty{c^2a^2+c^{-2}b^2}\\
+    ab&\leqslant\frac12\pqty{c^2a^2+c^{-2}b^2}\qed
+\end{aligned}\]
+
+\section*5
+\subsection*{(i)}
+\[\begin{aligned}
+    {(\alpha y-\beta x)}^2&\geqslant0\\
+    \alpha^2y^2-2\alpha\beta xy+\beta^2x^2&\geqslant0\\
+    \frac{\alpha^2}{x^2}+\frac{\beta^2}{y^2}&\geqslant\frac{2\alpha\beta}{xy}
+\end{aligned}\]
+\end{document}

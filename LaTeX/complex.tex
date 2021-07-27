@@ -1,0 +1,109 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\begin{document}
+\section*{(a)}
+\[2z^3-3z^2+kz+26=0,\,k\in\mathbb R\]
+By the conjugate root theorem, since all the conefficient of \(z\) are real, if \(z=1+ai\) is a root to the equation, \(z=1-ai\) must also be a root to the equation. Also, any odd degree polynomial has at least one real root. Thus, the original expression in \(z\) can be factor as:
+\[\begin{aligned}
+	&\phantom=A(z-(1+ai))(z-(1-ai))(z-c)\\
+	&=A((z-1)-ai)((z-1)+ai)(z-c)\\
+	&=A\left((z-1)^2-(ai)^2\right)(z-c)\\
+	&=A\left(z^2-2z+1+a^2\right)(z-c)\\
+	&=Az^3-2Az^2+A\left(1+a^2\right)z-Acz^2+2Acz-A\left(1+a^2\right)c\\
+	&=Az^3-A(2+c)z^2+A\left(1+a^2+2c\right)z-A\left(1+a^2\right)c\\
+\end{aligned}\]
+Since this expression is identical to the original,
+\[Az^3-A(2+c)z^2+A\left(1+a^2+2c\right)z-A\left(1+a^2\right)c\equiv2z^3-3z^2+kz+26\]
+By comparing coefficients, 
+\[\begin{cases}
+	A&=2\\
+	A(2+c)&=3\\
+	A\left(1+a^2+2c\right)&=k\\
+	A\left(1+a^2\right)c&=-26
+\end{cases}
+\implies
+\begin{cases}
+    2(2+c)&=3\\
+    2\left(1+a^2+2c\right)&=k\\
+    2\left(1+a^2\right)c&=-26
+\end{cases}\]
+\[\begin{cases}
+	c&=-\frac12\\
+    2\left(1+a^2+2c\right)&=k\\
+	2\left(1+a^2\right)c&=-26
+\end{cases}
+\implies
+\begin{cases}
+	2\left(1+a^2+2\left(-\frac12\right)\right)&=k\\
+	2\left(1+a^2\right)\left(-\frac12\right)&=-26
+\end{cases}\]
+\[\begin{cases}
+	2a^2&=k\\
+	a^2&=25
+\end{cases}
+\implies
+\boxed{\begin{cases}
+    k&=50\\
+    a&=5
+\end{cases}}\]
+\newpage
+\section*{(b)}
+\subsection*{(i)}
+\[\begin{aligned}
+    (x+iy)^2&=15+8i\\
+	x^2+2ixy-y^2&=15+8i\\
+	\left(x^2-y^2\right)+(2xy)i&=15+8i
+\end{aligned}\]
+Since \(x,y\in\mathbb R\), by comparing the coefficients of the real and imaginary parts,
+\[\begin{cases}
+	x^2-y^2&=15\\
+	2xy&=8
+\end{cases}\]
+\[\begin{aligned}
+	y=\frac4x\implies x^2-\left(\frac4x\right)^2&=15\\
+	x^2-\frac{16}{x^2}&=15\\
+	x^4-16&=15x^2\\
+	x^4-15x^2-16&=0\\
+	\left(x^2+1\right)\left(x^2-16\right)&=0\\
+	x^2-16&=0\\
+	x^2&=16\\
+	x&=\pm4\\
+	y&=\frac4{\pm4}\\
+	y&=\pm1
+\end{aligned}\]
+Possible values: \((x,y)=\boxed{(-4,-1)}\text{ OR }\boxed{(4,1)}\).
+\subsection*{(ii)}
+\[\begin{aligned}
+    z^2-(2+7i)z&=15-5i\\
+    z^2-(2+7i)z-(15-5i)&=0\\
+    z&=\frac{-(-(2+7i))\pm\sqrt{(-(2+7i))^2-4(1)(-(15-5i))}}{2(1)}\\
+    &=\frac{(2+7i)\pm\sqrt{(2+7i)^2+4(15-5i)}}{2}\\
+    &=\frac12\left(2+7i\pm\sqrt{4+28i-49+60-20i}\right)\\
+    &=\frac12\left(2+7i\pm\sqrt{15+8i}\right)\\
+    &=\frac12\left(2+7i\pm\sqrt{4^2+2(4)(i)+i^2}\right)\\
+    &=\frac12\left(2+7i\pm\sqrt{(4+i)^2}\right)\\
+    &=\frac12(2+7i\pm(4+i))\\
+\end{aligned}\]
+\[\begin{aligned}
+    z_2&=\frac12(2+7i-(4+i))\\
+    &=\frac12(-2+6i)\\
+    &=-1+3i\\
+    &=\sqrt{(-1)^2+3^2}e^{i\left(\pi-\tan^{-1}3\right)}\\
+    &=\boxed{\sqrt{10}e^{i\left(\pi-\tan^{-1}3\right)}}
+\end{aligned}\]
+\\
+\[\begin{aligned}
+    z_1&=\frac12(2+7i)+(4+i))\\
+    &=\frac12(6+8i)\\
+    &=3+4i
+\end{aligned}\]
+\\
+\[\begin{aligned}
+    \arg z_1^2z_2^*&=2\arg z_1-\arg z_2\\
+    &=2\tan^{-1}\frac43-\left(\pi-\tan^{-1}3\right)\\
+    &=\boxed{2\tan^{-1}\frac43+\tan^{-1}3-\pi}
+\end{aligned}\]
+\end{document}

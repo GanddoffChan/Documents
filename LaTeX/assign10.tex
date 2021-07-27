@@ -1,0 +1,62 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{physics}
+\usepackage{geometry}
+\usepackage{setspace}
+\doublespacing{}
+\title{Assignment $\mathbb Bg$}
+\author{GONDRO}
+
+\begin{document}
+\maketitle
+
+\section*1
+\[\begin{cases}
+y=y(x)\\
+\displaystyle\dv{y}{x}=\frac15(\tan x-xy)
+\end{cases}\]
+
+\subsection*{(i)}
+\[\begin{cases}
+0<h<\frac\pi2\\
+h\approx0\\
+y(0)=0
+\end{cases}\]
+
+\subsubsection*{(a)}
+\[\begin{aligned}
+    y_0&=y(0)=0\\
+    y_1&=y_0+\Delta x\eval{\dv{y}{x}}_{(x,y)=(x_0,y_0)}=0+\frac h2\frac15(\tan0-0\cdot0)=0\\
+    y_2&=y_1+\Delta x\eval{\dv{y}{x}}_{(x,y)=(x_1,y_1)}=0+\frac h2\frac15\left(\tan\frac h2-\frac h2\cdot0\right)=\frac h{10}\tan\frac h2\\
+\end{aligned}\] 
+\[y(h)\approx\boxed{\frac h{10}\tan\frac h2}\]
+
+\subsubsection*{(b)}
+\[\begin{aligned}
+    y_0&=y(0)=0\\
+    y_1&=y_0+\Delta x\frac{\displaystyle\eval{\dv{y}{x}}_{(x,y)=(x_1,y_1)}\eval{\dv{y}{x}}_{(x,y)=(x_0,y_0)}}2\\
+       &=0+h\frac{\frac15(\tan0-0\cdot0)+\frac15\left(\tan h-h\cdot0\right)}2=\frac h{10}\tan h\\
+\end{aligned}\]
+\[y(h)\approx\boxed{\frac h{10}\tan h}\]
+
+\subsection*{(ii)}
+\[\begin{aligned}
+    \dv{y}{x}&=\frac15(\tan x-xy)\\
+    \dv{y}{x}+\frac x5y&=\frac15\tan x\\
+    e^{0.1x^2}\left(\dv{y}{x}+\frac x5y\right)&=e^{0.1x^2}\left(\frac15\tan x\right)\\
+    e^{0.1x^2}\dv{y}{x}+0.2xe^{0.1x^2}y&=0.2e^{0.1x^2}\tan x\\
+    \dv{}{x}e^{0.1x^2}y&=0.2e^{0.1x^2}\tan x\\
+    e^{0.1x^2}y(x)&=\int0.2e^{0.1x^2}\tan x\dd{x}\\
+    e^{0.1h^2}y(h)&=\int0.2e^{0.1h^2}\tan h\dd{h}\\
+    e^{0.1h^2}y(h)&=\int_0^h0.2e^{0.1x^2}\tan x\dd{x}\qed
+\end{aligned}\]
+
+\[\begin{aligned}
+    \int_0^h0.2e^{0.1x^2}\tan x\dd{x}&\approx\int_0^h0.2e^{0.1x^2}x\dd{x}\\
+                                     &=\int_0^h0.2xe^{0.1x^2}\dd{x}\\
+                                     &=\eval{e^{0.1x^2}}_0^h\\
+                                     &=e^{0.1h^2}-e^0\\
+                                     &=e^{\frac{h^2}{10}}-1
+\end{aligned}\]
+\[y(h)\approx\boxed{e^{\frac{h^2}{10}}-1}\]
+\end{document}

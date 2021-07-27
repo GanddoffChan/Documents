@@ -1,0 +1,46 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\newcommand{\vv}{\mathbf}
+\title{Vectors, Lines and Planes}
+\author{Gordon Chan}
+\date{\LaTeX}
+\begin{document}
+\maketitle
+
+\section{Vectors}
+
+\subsection{Formal Definition}
+
+Vectors are members of a vector space \((V,S,+,\cdot)\).
+
+\subsection{Dot Product (Scalar Product)}
+
+\[\vv u\cdot\vv v=\|\vv u\|\|\vv v\|\cos\theta\]
+
+\subsection{Cross Product (Vector Product)}
+
+\[\vv u\times\vv v=\begin{vmatrix}
+    \vv i&\vv j&\vv k\\
+    u_1&u_2&u_3\\
+    v_1&v_2&v_3
+\end{vmatrix}=\begin{bmatrix}
+    u_1v_2-u_2v_1\\
+    u_3v_1-u_1v_3\\
+    u_2v_3-u_3v_2
+\end{bmatrix}\]
+
+\subsection{Length of Projections}
+
+\subsubsection{\(\vv u\) on \(\vv v\)}
+
+\[|\vv u\cdot\hat{\vv v}|=\frac{|\vv u\cdot\vv v|}{\|\vv v\|}=\|\vv u\|\cos\theta\]
+
+\subsubsection{Tip of \(\vv u\) on \(\vv v\)}
+
+\[|\vv u\times\hat{\vv v}|=\frac{|\vv u\times\vv v|}{\|\vv v\|}=\frac1{\sqrt{v_1^2+v_2^2+v_3^3}}\left|\begin{bmatrix}
+    u_1v_2-u_2v_1\\
+    u_3v_1-u_1v_3\\
+    u_2v_3-u_3v_2
+\end{bmatrix}\right|\]
+\[=\sqrt{\frac{(u_1v_2-u_2v_1)^2+(u_3v_1-u_1v_3)^2+(u_2v_3-u_3v_2)^2}{v_1^2+v_2^2+v_3^3}}\]
+\end{document}

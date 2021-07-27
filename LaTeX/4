@@ -1,0 +1,42 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{physics}
+\usepackage{geometry}
+\title{The Catenary}
+\author{Gordon Chan}
+
+\begin{document}
+\maketitle
+\section{Assumptions and Details}
+\begin{itemize}
+    \item the string has a finite length \(\ell\)
+    \item the string has a uniform linear density \(\rho\) 
+    \item the string is supended at its two end points by two identical poles
+    that are distance \(d<\ell\) apart horizontally and have the same vertical level,
+    \item gravity is uniform
+\end{itemize}
+
+\section{Derivation}
+To determine the equation of the string \(y(x)\), 
+let the point (x,y) be a point on the string that is distance \(s\) 
+along the cable from the lowest point of the string. 
+Also, let the tangent of the string at \((x,y)\) have an angle of \(\theta\)
+with respect to the horizontal.
+Futher let the tension acting on \((x,y)\) be \(T\)
+and the tension acting on the lowest point be \(T_x\).
+By equilibrium, it can be deduced that,
+\begin{equation}
+    \sum F_x=0\implies T\cos\theta-T_x=0\implies T\cos\theta=T_x
+\end{equation}
+\begin{equation}
+    \sum F_y=0\implies T\sin\theta-s\rho=0\implies T\sin\theta=s\rho
+\end{equation}
+By dividing the the two equations,
+\begin{equation}
+    \tan\theta=\frac{s\rho}{T_x}
+\end{equation}
+Let \(\frac\rho{T_x}=a\). Since at \((x,y)\), \(\dv{y}{x}=\tan\theta\),
+\begin{equation}
+    \dv{y}{x}=as
+\end{equation}
+\end{document}

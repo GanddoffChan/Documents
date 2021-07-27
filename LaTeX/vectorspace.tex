@@ -1,0 +1,114 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{graphicx}
+\usepackage{concmath}
+\usepackage[T1]{fontenc}
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
+\begin{document}
+\def\arraystretch{1.25}
+9.
+(i)
+\[{\bf A}=
+\begin{bmatrix}
+1&-2&1&3\\
+2&1&5&-7\\
+4&-3&7&^-1\\
+3&14&15&-43
+\end{bmatrix}
+\overset{\text{rref}}{\longrightarrow}
+\begin{bmatrix}
+	1&0&\frac{11}5&-\frac{11}5\\
+0&1&\frac35&-\frac{13}5\\
+0&0&0&0\\
+0&0&0&0
+\end{bmatrix}\]
+\[{\bf K}=\ker({\bf A})=
+	\left\{\begin{bmatrix}x_1\\x_2\\x_3\\x_4\end{bmatrix}:
+\begin{bmatrix}
+	1&0&\frac{11}5&-\frac{11}5\\
+0&1&\frac35&-\frac{13}5\\
+0&0&0&0\\
+0&0&0&0
+\end{bmatrix}
+\begin{bmatrix}x_1\\x_2\\x_3\\x_4\end{bmatrix}
+=\begin{bmatrix}0\\0\\0\\0\end{bmatrix}
+\right\}\]
+\[\implies\begin{cases}
+	x_4=\mu\\
+	x_3=\lambda\\
+	x_2=-\frac35\lambda+\frac{13}5\mu\\
+	x_1=-\frac{11}5\lambda+\frac{11}5\mu
+\end{cases},\,\lambda,\mu\in\mathbb R\]
+\[{\bf K}=
+	\left\{\lambda\begin{bmatrix}-11\\-3\\5\\0\end{bmatrix}+\mu\begin{bmatrix}11\\13\\0\\5\end{bmatrix},\,\lambda,\mu\in\mathbb R\right\}
+\]
+When \(\lambda=\mu=0\), \(\lambda\begin{bmatrix}-11\\-3\\5\\0\end{bmatrix}+\mu\begin{bmatrix}11\\13\\0\\5\end{bmatrix}={\bf 0}\in{\bf K}\). 
+
+Let \({\bf k}_{i,j}=\lambda_i\begin{bmatrix}-11\\-3\\5\\0\end{bmatrix}+\mu_j\begin{bmatrix}11\\13\\0\\5\end{bmatrix}\in{\bf K}\).
+\[\begin{aligned}
+	\alpha{\bf k}_{1,1}+\beta{\bf k}_{2,2}&=\alpha\left(\lambda_1\begin{bmatrix}-11\\-3\\5\\0\end{bmatrix}+\mu_1\begin{bmatrix}11\\13\\0\\5\end{bmatrix}\right)+\beta\left(\lambda_2\begin{bmatrix}-11\\-3\\5\\0\end{bmatrix}+\mu_2\begin{bmatrix}11\\13\\0\\5\end{bmatrix}\right)\\
+&=\alpha\lambda_1\begin{bmatrix}-11\\-3\\5\\0\end{bmatrix}+\alpha\mu_1\begin{bmatrix}11\\13\\0\\5\end{bmatrix}+\beta\lambda_2\begin{bmatrix}-11\\-3\\5\\0\end{bmatrix}+\beta\mu_2\begin{bmatrix}11\\13\\0\\5\end{bmatrix}\\
+&=(\alpha\lambda_1+\beta\lambda_2)\begin{bmatrix}-11\\-3\\5\\0\end{bmatrix}+(\alpha\mu_1+\beta\mu_2)\begin{bmatrix}11\\13\\0\\5\end{bmatrix}\in{\bf K}
+\end{aligned}\]
+Therefore, \(\bf K\) is a vector space.\qed
+\[\dim({\bf K})=\boxed2\]
+
+(ii)
+\[[{\bf A}|{\bf b}]=
+	\begin{bmatrix}[cccc|c]
+		1&-2&1&3&3\\
+		2&1&5&-7&1\\
+		4&-3&7&-1&7\\
+		3&14&15&-43&-11
+	\end{bmatrix}
+\overset{\text{rref}}{\longrightarrow}
+	\begin{bmatrix}[cccc|c]
+		1&0&\frac{11}5&-\frac{11}5&1\\
+		0&1&\frac35&-\frac{13}5&-1\\
+		0&0&0&0&0\\
+		0&0&0&0&0
+	\end{bmatrix}\]
+\[S=
+	\left\{\begin{bmatrix}x_1\\x_2\\x_3\\x_4\end{bmatrix}:
+\begin{bmatrix}
+	1&0&\frac{11}5&-\frac{11}5\\
+0&1&\frac35&-\frac{13}5\\
+0&0&0&0\\
+0&0&0&0
+\end{bmatrix}
+\begin{bmatrix}x_1\\x_2\\x_3\\x_4\end{bmatrix}
+=\begin{bmatrix}1\\-1\\0\\0\end{bmatrix}
+\right\}\]
+\[\implies\begin{cases}
+	x_4=\mu\\
+	x_3=\lambda\\
+	x_2=-1-\frac35\lambda+\frac{13}5\mu\\
+	x_1=1-\frac{11}5\lambda+\frac{11}5\mu
+\end{cases},\,\lambda,\mu\in\mathbb R\]
+\[S=\left\{\begin{bmatrix}1\\-1\\0\\0\end{bmatrix}+
+\lambda\begin{bmatrix}-11\\-3\\5\\0\end{bmatrix}+\mu\begin{bmatrix}11\\13\\0\\5\end{bmatrix},\,\lambda,\mu\in\mathbb R\right\}
+\]
+Suppose \((\exists s_p\in S)(s_p={\bf 0})\).
+\[\begin{bmatrix}1\\-1\\0\\0\end{bmatrix}+
+\lambda_p\begin{bmatrix}-11\\-3\\5\\0\end{bmatrix}+\mu_p\begin{bmatrix}11\\13\\0\\5\end{bmatrix}=\begin{bmatrix}0\\0\\0\\0\end{bmatrix}\]
+\[
+	\implies\begin{cases}
+	0+5\lambda_p+0\mu_p=0\\
+	0+0\lambda_p+5\mu_p=0\\
+	1-11\lambda_p+11\mu_p=0
+\end{cases}
+	\implies\begin{cases}
+		\lambda_p=0\\
+		\mu_p=0\\
+		1=0
+\end{cases}
+\implies\impliedby
+\]
+\[\implies{\bf0}\not\in S\]
+Therefore, \(S\) is not a vector space.
+\end{document}

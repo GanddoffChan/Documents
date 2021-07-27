@@ -1,0 +1,22 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[landscape]{geometry}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{physics}
+\begin{document}
+\[\def\arraystretch{1.5}
+\begin{array}{|c|c|c|c|c|c|c|c|}
+	\hline
+	n&\Delta x&x_n&y_n=y_{n-1}+\Delta x\frac{\Delta y}{\Delta x}&y_n-x_n&\tilde{y}_n=y_n+\Delta x(y_n-x_n)&\tilde{y}_n-x_{n+1}&\frac{\Delta y}{\Delta x}=\frac{(y_n-x_n)+(\tilde{y}_n-x_{n+1})}2\\
+	\hline
+	0&0.5&0&2&2&3&2.5&\frac{2+2.5}2\\
+	\hline
+	1&0.5&0.5&3.125&2.625&4.438&3.438&\frac{2.625+3.438}2\\
+	\hline
+	2&0.5&1&4.641&3.641&6.462&4.962&\frac{3.641+4.962}2\\
+	\hline
+\end{array}\]
+\end{document}

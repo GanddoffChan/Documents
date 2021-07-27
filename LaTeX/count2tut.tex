@@ -1,0 +1,38 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{graphicx}
+\usepackage{concmath}
+\usepackage[T1]{fontenc}
+
+\begin{document}
+
+{\large1}
+\[\begin{cases}
+	10^{40}=(2\cdot5)^{40}=2^{40}\cdot5^{40}\\
+	20^{30}=(2^2\cdot5)^{40}=2^{60}\cdot5^{30}\\
+	\gcd\left(10^{40},20^{30}\right)=2^{40}\cdot5^{30}
+\end{cases}\]
+
+\[\begin{cases}
+	\left|D\left(10^{40}\right)\right|=(40+1)(40+1)=1681\\
+	\left|D\left(20^{30}\right)\right|=(60+1)(30+1)=1891\\
+	\left|D\left(\gcd\left(10^{40},20^{30}\right)\right)\right|=(40+1)(30+1)=1271
+\end{cases}\]
+
+\[\begin{aligned}
+	&\quad\,\left|D\left(10^{40}\lor20^{30}\right)\right|\\
+	&=\left|D\left(10^{40}\right)\cup D\left(20^{30}\right)\right|\\
+	&=\left|D\left(10^{40}\right)\right|+\left|D\left(20^{30}\right)\right|-\left|D\left(10^{40}\right)\cap D\left(20^{30}\right)\right|\\
+	&=\left|D\left(10^{40}\right)\right|+\left|D\left(20^{30}\right)\right|-\left|D\left(10^{40}\land20^{30}\right)\right|\\
+	&=\left|D\left(10^{40}\right)\right|+\left|D\left(20^{30}\right)\right|-\left|D\left(\gcd\left(10^{40},20^{30}\right)\right)\right|\\
+	&=1681+1891-1271\\
+	&=\boxed{2301}
+\end{aligned}\]
+
+{\large2}
+\[\begin{aligned}
+	|S_{\ne}|&=\left|A_3^\prime\cap B_5^\prime\cap C_7^\prime\right|\\
+		 &=|S|-\left|A_3^\prime\cup B_5^\prime\cup C_7^\prime\right|\\
+		 &=|S|-\left(\left|A_3^\prime\right|+\left|B_5^\prime\right|+\left|C_7^\prime\right|+\left|A_3^\prime\cup B_5^\prime\right|+\left|A_3^\prime\cup B_5^\prime\right|\right)\\
+\end{aligned}\]
+\end{document}

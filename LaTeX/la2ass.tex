@@ -1,0 +1,121 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{graphicx}
+\usepackage{concmath}
+\usepackage[T1]{fontenc}
+\newcommand{\vv}{\mathbf}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\rref}{\operatorname{rref}}
+\newcommand{\nullity}{\operatorname{nullity}}
+
+\begin{document}
+1.
+
+Let \(\vv M=\begin{bmatrix}
+                1&b&a\\
+                a&1&b\\
+                b&a&1
+        \end{bmatrix}\).
+
+\[\begin{aligned}
+        \det(\vv M)&=1(1-ab)+b\left(b^2-a\right)+a\left(a^2-b\right)\\
+                       &=1-ab+b^3-ab+a^3-ab\\
+                       &=a^3-3ab+b^3+1
+\end{aligned}\]
+
+Since \(\left\{
+        \begin{bmatrix}
+        1\\a\\b
+        \end{bmatrix},
+        \begin{bmatrix}
+        a\\1\\b
+        \end{bmatrix},
+        \begin{bmatrix}
+        b\\a\\1
+        \end{bmatrix}\right\}\)
+        is not a basis for \(\mathbb R^3\), \(\operatorname{rank}(\vv M)<3\).
+
+        Thus, \(\det(\vv M)=0\).
+        \[a^3-3ab+b^3+1=0\qed\]
+
+
+2. (i)
+
+\[\vv A\vv0=\vv0\implies\vv0\in W\]
+Let \(\vv u,\vv v\in W\).
+(\(\implies\vv A\vv u=\vv u\land\vv A\vv v=\vv v\))
+\[\vv A(a\vv u+b\vv v)
+        =\vv A(a\vv u)+\vv A(b\vv v)
+        =a\vv A\vv u+b\vv A\vv v
+        =a\vv u+b\vv v
+\implies a\vv u+b\vv v\in W\]
+Since \(W\subset\mathbb R^n\), \(\vv0\in W\)
+and \(\vv u,\vv v\in W\implies a\vv u+b\vv v\in W\),
+\(W\) is a subspace of \(\mathbb R^n\).\qed
+
+
+2. (ii)
+
+\[\vv A\vv u=\vv u\iff\vv A\vv u-\vv I\vv u=\vv0\iff(\vv A-\vv I)\vv u=\vv0\]
+\[\begin{bmatrix}0&0&-1\\0&0&0\\0&0&-2\end{bmatrix}
+\begin{bmatrix}u_1\\u_2\\u_3\end{bmatrix}=0\implies u_3=0\]
+Let \(u_1=\lambda\) and \(u_2=\mu\).
+\[\vv u=\begin{bmatrix}\lambda\\\mu\\0\end{bmatrix}
+=\lambda\begin{bmatrix}1\\0\\0\end{bmatrix}+\mu\begin{bmatrix}0\\1\\0\end{bmatrix}\]
+A basis of \(W\), is
+\[\boxed{\left\{\begin{bmatrix}1\\0\\0\end{bmatrix},
+\begin{bmatrix}0\\1\\0\end{bmatrix}\right\}}\]
+
+
+3. (i)
+
+Let \(\vv X=\begin{bmatrix}\vv x_1&\vv x_2&\vv x_3&\vv x_4\end{bmatrix}\).
+\[\det(\vv X)=1(1(1(1)))=1\ne0\implies \rank(\vv X)=4\]
+Since \(\vv X\) is full rank, the columns of \(\vv X\), \(\vv x_1\), \(\vv x_2\), \(\vv x_3\) and \(\vv x_4\) form a basis of \(\mathbb R^4\).\qed
+
+
+3. (ii)
+
+\[\rref(\vv A)=\begin{bmatrix}
+        1&0&-1&2\\
+        0&1&2&-1\\
+        0&0&0&0\\
+        0&0&0&0
+\end{bmatrix}
+\implies\rank(A)=\boxed2\]
+\[\nullity(\vv A)=4-2=\boxed2\]
+
+
+3. (iii)
+
+\[\vv A\vv x_1=\begin{bmatrix}1\\-3\\4\\6\end{bmatrix}\]
+\[\vv A\vv x_2=\begin{bmatrix}2\\1\\9\\4\end{bmatrix}\]
+
+Since \(\rank(\vv A)=2\), all \(\vv A\vv x_i\) are coplanar. Therefore, all linear combinations of these vector, ie \(\sum\lambda\vv A\vv x\), exist on the same two dimensional space. Moreover, since \(\vv A\vv x_1\) cannot be expressed as a scalar multiple of \(\vv A\vv x_2\), the dimension of \(V\) cannot be 0 or 1. Thus, \(\dim(V)=2\).\qed
+
+A basis of \(V\), is
+\[\boxed{\left\{\begin{bmatrix}1\\-3\\4\\6\end{bmatrix},
+\begin{bmatrix}2\\1\\9\\4\end{bmatrix}\right\}}\]
+
+
+3. (iv)
+
+\[\begin{bmatrix}p\\q\\23\\6\end{bmatrix}=\lambda\begin{bmatrix}1\\-3\\4\\6\end{bmatrix}+\mu\begin{bmatrix}2\\1\\9\\4\end{bmatrix}\]
+
+\[\begin{cases}
+        4\lambda+9\mu=23\\
+        6\lambda+4\mu=6
+\end{cases}
+\iff
+\begin{cases}
+        12\lambda+27\mu=69\\
+        12\lambda+8\mu=12
+\end{cases}
+\implies
+19\mu=57\iff \mu=3\]
+
+\[6\lambda+4(3)=6\iff6\lambda=-6\iff\lambda=-1\]
+
+\[p=(-1)1+(3)2=\boxed5\]
+\[q=(-1)(-3)+(3)1=\boxed6\]
+\end{document}

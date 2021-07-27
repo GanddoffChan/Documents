@@ -1,0 +1,60 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{physics}
+
+\begin{document}
+\section*1
+\[\max(m,n)\left\lceil\frac{\max(m,n)}{\min(m,n)}\right\rceil\]
+
+\section*2
+When sorted from top to bottom, left to right, 
+the order of the tiles are only changed when a vertical move is made.
+However, the change of the number of out-of-order pair is alway even.
+Since the original number of out-of-order pairs is 0,
+the number of out-of-order pairs will always stay even.
+Since the number of out-of-order pairs is odd on the target arrangement,
+it is impossible to arrange the tiles from the left arrangement
+to the right arrangement.
+
+\section*4
+\[\min\pqty{\sum_{i=k}^{k+1}|u_{i}+u_{i-1}|}=(k+1-k)-(k-(k-1))=1-1=\boxed0\]
+\[\begin{aligned}
+    &\phantom{=}\max\pqty{\sum_{i=k}^{k+1}|u_{i}+u_{i-1}|}\\
+    &=\max(u_{k+1}-u_k+u_k-u_{k-1})\\
+    &=\max(2u_k-u_{k+1}-u_{k-1})\\
+    &=2n-1-2\\
+    &=\boxed{2n-3}
+\end{aligned}\]
+
+\newpage
+\section*6
+\[x\lfloor x\lfloor x\lfloor x\rfloor\rfloor\rfloor=50\]
+\[x\lfloor x\lfloor x\lfloor x\rfloor\rfloor\rfloor\approx x^4\]
+\[x^4=50\implies x=\pm\sqrt[4]{50}\approx\pm2.66\implies
+x\lfloor x\lfloor x\lfloor x\rfloor\rfloor\rfloor=50\implies x\in(-3,-2)\cup(2,3)\]
+If \(x>0\), \(x\in(2,3)\).
+\[\begin{aligned}
+    x&<3\\
+    \lfloor x\rfloor&\leqslant2\\
+    x\lfloor x\rfloor&<6\\
+    \lfloor x\lfloor x\rfloor\rfloor&\leqslant5\\
+    x\lfloor x\lfloor x\rfloor\rfloor&<15\\
+    \lfloor x\lfloor x\lfloor x\rfloor\rfloor\rfloor&\leqslant14\\
+    x\lfloor x\lfloor x\lfloor x\rfloor\rfloor\rfloor&<42\\
+    x\lfloor x\lfloor x\lfloor x\rfloor\rfloor\rfloor&\ne50\\
+\end{aligned}\]
+If \(x<0\), \(x\in(-3,-2)\).
+\[x\lfloor x\lfloor x\lfloor x\rfloor\rfloor\rfloor=50
+\implies\lfloor x\lfloor x\lfloor x\rfloor\rfloor\rfloor=m\in\mathbb Z^-\]
+\[xm=50\implies x=\frac{50}m\]
+\[\begin{array}{ccccc}
+    -3&<&x&<&-2\\
+    -3&<&\frac{50}m&<&-2\\
+    -\frac12&<&\frac m{50}&<&-\frac13\\
+    -25&<&m&<&-\frac{50}3\\
+    -24&\leqslant&m&\leqslant&-17
+\end{array}\]
+\[x=\frac{50}m\in\left\{-\frac{50}{24},\dots,-\frac{50}{17}\right\}\implies\boxed{x=-\frac{50}{19}}\]
+\end{document}

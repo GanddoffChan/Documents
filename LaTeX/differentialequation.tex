@@ -1,0 +1,25 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{geometry}
+\newcommand{\dd}{\mathrm{d}}
+\author{Gordon Chan}
+\title{Differential Equation}
+\date{\LaTeX}
+\begin{document}
+\maketitle
+\section{Formal Definition}
+
+An differential equation is an equation that relates one or more functions and their derivatives.
+
+\[\text{General }\mathbb{FORM}:\sum\limits_{n=1}^N\prod\limits_{i=m_n}^{m_{n+1}}f_{k_i}^{(k_i)}(x)=0\]
+
+\section{Forms in H2 Math}
+\subsection{First Order Separable}
+
+\[\frac{\dd y}{\dd x}=f(x)g(y)\iff\int\frac1{g(y)}\,\dd y=\int f(x)\,\dd x\]
+
+
+\subsection{Second Order}
+
+\[\frac{\dd^2 y}{\dd x^2}=f(x)\iff y=\int\left(\int f(x)\,\dd x\right)\,\dd x\]
+\end{document}

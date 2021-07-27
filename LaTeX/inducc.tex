@@ -1,0 +1,221 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{physics}
+\usepackage{multicol}
+\usepackage{booktabs}
+
+\newcommand{{\LH}}{\text{LHS}}
+\newcommand{{\RH}}{\text{RHS}}
+\begin{document}
+
+\section*5
+\[\{u_n\}:u_n=u_1+(n-1)d,u_1,d\geqslant0\]
+\begin{multicols}{2}
+    \[\begin{aligned}
+    \text{LHS}&=\frac1{u_1u_2}+\frac1{u_2u_3}+\frac1{u_3u_4}+\cdots+\frac1{u_{n-1}u_n}\\
+              &=\sum_{i=2}^n\frac1{u_{i-1}u_i}
+    \end{aligned}\]
+
+\[\text{RHS}=\frac{n-1}{u_1u_n}\]
+\end{multicols}
+For the base case, \(n=2\).
+\begin{multicols}{2}
+\[\text{LHS}=\sum_{n=2}^2\frac1{u_{i-1}u_i}=\frac1{u_1u_2}\]
+
+\[\text{RHS}=\frac1{u_1u_2}\]
+\end{multicols}
+\[n=2\implies\text{LHS}=\text{RHS}\]
+Assume for some \(k\in\mathbb{Z},k>2\), \(n=k\implies\text{LHS}=\text{RHS}\), such that:
+\[\sum_{n=2}^k\frac1{u_{i-1}u_i}=\frac{k-1}{u_1u_k}\]
+When \(n=k+1\).
+\begin{multicols}{2}
+\[\begin{aligned}
+    \text{LHS}&=\sum_{n=2}^{k+1}\frac1{u_{i-1}u_i}\\
+       &=\sum_{n=2}^k\frac1{u_{i-1}u_i}+\frac1{u_k{u_{k+1}}}\\
+       &=\frac{k-1}{u_1u_k}+\frac1{u_k{u_{k+1}}}\\
+       &=\frac{(k-1)u_{k+1}}{u_1u_k{u_{k+1}}}+\frac{u_1}{u_1u_k{u_{k+1}}}\\
+       &=\frac{ku_{k+1}-u_{k+1}+u_1}{u_1u_k{u_{k+1}}}\\
+       &=\frac{(u_k+d)k-(u_1+kd)+u_1}{u_1u_k{u_{k+1}}}\\
+       &=\frac{ku_k+kd-u_1-kd+u_1}{u_1u_k{u_{k+1}}}\\
+       &=\frac{ku_k}{u_1u_k{u_{k+1}}}\\
+       &=\frac{k}{u_1{u_{k+1}}}
+\end{aligned}\]
+
+\[\begin{aligned}
+    \text{RHS}&=\frac{(k+1)-1}{u_1u_{k+1}}\\
+              &=\frac{k}{u_1u_{k+1}}
+\end{aligned}\]
+\end{multicols}
+\[(n=k\implies\text{LHS}=\text{RHS})\implies(n=k+1\implies\text{LHS}=\text{RHS})\]
+Therefore, by mathematical induction,
+\[\frac1{u_1u_2}+\frac1{u_2u_3}+\frac1{u_3u_4}+\cdots+\frac1{u_{n-1}u_n}=\frac{n-1}{u_1u_n},\,n\geqslant2\qed\]
+
+\section*{10}
+\[\begin{aligned}
+    y&=x\sin x\\
+    \dv{y}{x}&=x\cos x+\sin x\\
+    \dv[2]{y}{x}&=\boxed{-x\sin x+2\cos x}\\
+    \dv[3]{y}{x}&=-x\cos x-3\sin x\\
+    \dv[4]{y}{x}&=\boxed{x\sin x-4\cos x}\\
+    \dv[5]{y}{x}&=x\cos x+5\sin x\\
+    \dv[6]{y}{x}&=-x\sin x+6\cos x\qed
+\end{aligned}\]
+By inspection, a conjecture is proposed such that:
+\[\dv[2n]{y}{x}={(-1)}^n(x\sin x-2n\cos x),\,n\in\mathbb{Z}^+\]
+For the base case, \(n=1\).
+\begin{multicols}{2}
+    \[\begin{aligned}
+        \text{LHS}&=\dv[2]{y}{x}\\
+                  &=-x\sin x+2\sin x
+    \end{aligned}\]
+
+    \[\begin{aligned}
+        \text{RHS}&=(-1)(x\sin x-2\cos x)\\
+                  &=-x\sin x+2\sin x
+    \end{aligned}\]
+\end{multicols}
+\[n=1\implies\text{LHS}=\text{RHS}\]
+Assume for some \(k\in\mathbb{Z}^+\), \(n=k\implies\text{LHS}=\text{RHS}\), such that:
+\[\dv[2k]{y}{x}={(-1)}^k(x\sin x-2k\cos x)\]
+\newpage
+When \(n=k+1\).
+\begin{multicols}{2}
+    \[\begin{aligned}
+        \text{LHS}&=\dv[2(k+1)]{y}{x}\\
+                  &=\dv[2k+2]{y}{x}\\
+                  &=\dv[2]{x}\pqty{\dv[2k]{y}{x}}\\
+                  &=\dv{x}\pqty{\dv{x}\pqty{{(-1)}^k(x\sin x-2k\cos x)}}\\
+                  &={\dv{x}}\pqty{{(-1)}^k(x\cos x+(2k+1)\sin x)}\\
+                  &={(-1)}^k(-x\sin x+(2k+2)\cos x)\\
+    \end{aligned}\]
+
+    \[\begin{aligned}
+        \text{RHS}&={(-1)}^{k+1}(x\sin x-2(k+1)\cos x)\\
+                  &={(-1)}^k(-1)(x\sin x-2(k+1)\cos x)\\
+                  &={(-1)}^k(-x\sin x+(2k+2)\cos x)\\
+    \end{aligned}\]
+\end{multicols}
+\[(n=k\implies\text{LHS}=\text{RHS})\implies(n=k+1\implies\text{LHS}=\text{RHS})\]
+Therefore, by mathematical induction,
+\[\boxed{\dv[2n]{y}{x}={(-1)}^n(x\sin x-2n\cos x),\,n\in\mathbb{Z}^+}\]
+
+\section*{11}
+\begin{multicols}{2}
+    \[\LH={\dv[n]\theta}\pqty{\sin a\theta}\]
+
+    \[\RH=a^n\sin\pqty{a\theta+\frac{n\pi}2}\]
+\end{multicols}
+For the base case, \(n=1\).
+\begin{multicols}{2}
+    \[\begin{aligned}
+        \text{LHS}&=\dv\theta\pqty{\sin a\theta}\\
+                  &=a\cos a\theta
+    \end{aligned}\]
+
+    \[\begin{aligned}
+        \text{RHS}&=a\sin\pqty{a\theta+\frac\pi2}\\
+                  &=a\cos a\theta
+    \end{aligned}\]
+\end{multicols}
+\[n=1\implies\text{LHS}=\text{RHS}\]
+Assume for some \(k\in\mathbb{Z}^+\), \(n=k\implies\text{LHS}=\text{RHS}\), such that:
+\[{\dv[k]\theta}\pqty{\sin a\theta}=a^k\sin\pqty{a\theta+\frac{k\pi}2}\]
+\newpage
+When \(n=k+1\).
+\begin{multicols}{2}
+    \[\begin{aligned}
+        \LH&={\dv[k+1]\theta}\pqty{\sin a\theta}\\
+           &=\dv{\theta}\pqty{{\dv[k]\theta}\pqty{\sin a\theta}}\\
+           &=\dv{\theta}\pqty{a^k\sin\pqty{a\theta+\frac{k\pi}2}}\\
+           &={a^k}a\cos\pqty{a\theta+\frac{k\pi}2+\frac\pi2-\frac\pi2}\\
+           &=a^{k+1}\sin\pqty{a\theta+\frac{(k+1)\pi}2}\\
+    \end{aligned}\]
+
+    \[\begin{aligned}
+        \RH&=a^{k+1}\sin\pqty{a\theta+\frac{(k+1)\pi}2}
+    \end{aligned}\]
+\end{multicols}
+\[(n=k\implies\text{LHS}=\text{RHS})\implies(n=k+1\implies\text{LHS}=\text{RHS})\]
+Therefore, by mathematical induction,
+\[\boxed{{\dv[n]\theta}\pqty{\sin a\theta}=a^n\sin\pqty{a\theta+\frac{n\pi}2},\,n\in\mathbb{Z}^+}\]
+
+\section*{12}
+For \(n\in\mathbb{Z}^-\), \(n{!}\) is undefined. Hence, consider \(n\in\mathbb{Z}^+\cup\{0\}\).
+\[\begin{array}{ccc}
+    n&3^n&n{!}\\
+    \midrule
+    0&1&1\\
+    1&3&1\\
+    2&9&2\\
+    3&27&6\\
+    4&81&24\\
+    5&243&120\\
+    6&729&720\\
+    7&2187&5040
+\end{array}\]
+Therefore, the smallest integer for which \(3^n<n{!}\) is \(n_0=\boxed7\).
+\begin{multicols}{2}
+    \[\LH=3^n\]
+
+    \[\RH=3{!}\]
+\end{multicols}
+For the base case, \(n=7\).
+\begin{multicols}{2}
+    \[\begin{aligned}
+        \text{LHS}&=3^7\\
+                  &=2187
+    \end{aligned}\]
+
+    \[\begin{aligned}
+        \text{RHS}&=7!
+                  &=5040
+    \end{aligned}\]
+\end{multicols}
+\[n=1\implies\text{LHS}<\text{RHS}\]
+Assume for some \(k\in\mathbb{Z},k\geqslant7\), \(n=k\implies\text{LHS}<\text{RHS}\), such that:
+\[3^k<k{!}\]
+When \(n=k+1\).
+\begin{multicols}{2}
+    \[\begin{aligned}
+        \LH&=3^{k+1}\\
+           &=3\pqty{3^k}
+    \end{aligned}\]
+
+    \[\begin{aligned}
+        \RH&=(k+1){!}\\
+           &=(k+1)k{!}
+    \end{aligned}\]
+\end{multicols}
+\[k\geqslant7\implies k+1\geqslant8>3\]
+\[\begin{aligned}
+    3^k&<k{!}\\
+    3\pqty{3^k}&<3k{!}\\
+    3\pqty{3^k}&<(k+1)k{!}\\
+    \LH&<\RH
+\end{aligned}\]
+\[(n=k\implies\text{LHS}<\text{RHS})\implies(n=k+1\implies\text{LHS}<\text{RHS})\]
+Therefore, by mathematical induction,
+\[3^n<n{!},\,\forall n\in\mathbb{Z},\,n\geqslant7\qed\]
+
+\section*{13}
+\[\{u_n\}:u_{n+1}=\frac{u_n^2+4}{u_n+2},\,u_1=1,\,n\in\mathbb{Z},\,n\geqslant1\]
+For base case, \(n=1\).
+\[u_n=u_1=1\]
+\[n=1\implies0<u_n<2\]
+Assume for some \(k\in\mathbb{Z}^+\), \(n=k\implies0<u_n<2\), such that:
+\[0<u_k<2\]
+\[\begin{aligned}
+    2-u_{k+1}&=2-\frac{u_k^2+4}{u_k+2}\\
+             &=2-\pqty{u_k-2+\frac8{u_k+2}}\\
+             &=4-u_k-\frac8{u_k+2}\\
+\end{aligned}\]
+
+\section*{14}
+\[\{u_n\}:u_{n+1}=\frac{u_n^2+3u_n}{u_n+1},\,u_1=1,\,n\in\mathbb{Z},\,n\geqslant1\]
+Let \(P(n)\iff u_n<2n\).
+For base case, \(n=1\).
+\[u_n=u_1=1<2=2(1)=2n\]
+\[P(1)\to\top\]
+\end{document}

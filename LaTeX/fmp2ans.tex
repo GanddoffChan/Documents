@@ -1,0 +1,79 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{physics}
+\usepackage[margin=1in]{geometry}
+\title{Solution for The Pure Mathematics Portion of\\
+GCE `A' Levels Further Mathematics Paper 2}
+\author{Gordon Chan}
+
+\begin{document}
+\maketitle
+
+\section*1
+\subsection*{(i)}
+Let \(\vb A=\bmqty{1&-1&2&-1&5\\1&3&-2&1&-1\\1&0&1&3&0\\0&1&-1&1&2}\) and \(\vb x=\bmqty{x_1\\x_2\\x_3\\x_4\\x_5}\).
+\[\begin{aligned}
+    \vb A=\bmqty{1&-1&2&-1&5\\1&3&-2&1&-1\\1&0&1&3&0\\0&1&-1&1&2}
+     &\to\bmqty{1&-1&2&-1&5\\0&4&-4&2&-6\\0&1&-1&4&-5\\0&1&-1&1&2}\\
+      \to\bmqty{1&-1&2&-1&5\\0&1&-1&\frac12&-\frac32\\0&1&-1&4&-5\\0&1&-1&1&2}
+     &\to\bmqty{1&0&1&-\frac12&\frac72\\0&1&-1&\frac12&-\frac32\\0&0&0&\frac72&-\frac72\\0&0&0&\frac12&\frac72}\\
+      \to\bmqty{1&0&1&0&3\\0&1&-1&0&-1\\0&0&0&\frac72&-\frac72\\0&0&0&0&4}
+     &\to\bmqty{1&0&1&0&3\\0&1&-1&0&-1\\0&0&0&1&-1\\0&0&0&0&1}\\
+      \to\bmqty{1&0&1&0&0\\0&1&-1&0&0\\0&0&0&1&0\\0&0&0&0&1}&=\text{rref}(\vb A)
+\end{aligned}\]
+\[\vb A\vb x=\vb0
+\implies
+\text{rref}(\vb A)\vb x=\vb0
+\implies
+\begin{cases}
+    x_1+x_3=0\\
+    x_2-x_3=0\\
+    x_4=0\\
+    x_5=0
+\end{cases}
+\implies
+\begin{cases}
+    x_1=-x_3\\
+    x_2=x_3\\
+    x_4=0\\
+    x_5=0
+\end{cases}\]
+\[\vb x=\bmqty{x_1\\x_2\\x_3\\x_4\\x_5}
+    =\bmqty{-x_3\\x_3\\x_3\\0\\0}
+=x_3\bmqty{-1\\1\\1\\0\\0},
+\,x_3\in\mathbb R\]
+\[S=\ker(\vb A)\implies 
+B_S=B_{\ker(\vb A)}
+=\boxed{\Bqty{\bmqty{-1\\1\\1\\0\\0}}}\]
+\subsection*{(ii)}
+\[\dim(S)=\dim(\ker\vb A)=\boxed1\]
+
+\section*2
+\subsection*{(i)}
+\[\begin{aligned}
+    z^7&=1\\
+    z^7&\equiv e^{i(2\pi m)},\,m\in\{0,\pm1,\pm2,\pm3\}\\
+z&\in\Bqty{1,e^{i\pqty{\pm\frac{2\pi}7}},e^{i\pqty{\pm\frac{4\pi}7}},e^{i\pqty{\pm\frac{6\pi}7}}}
+\end{aligned}\]
+\[\begin{aligned}
+    z^7-1&=(z-1)\prod_{n=1}^3\pqty{z-e^{i\pqty{\frac{2n\pi}7}}}\pqty{z-e^{i\pqty{-\frac{2n\pi}7}}}\\
+    \frac{z^7-1}{z-1}&=\prod_{n=1}^3\pqty{z^2-\pqty{2\cos\frac{2n\pi}7}z+e^{i\pqty{0}}}\\
+    \sum_{n=0}^6z^n&=\boxed{\pqty{z^2-\pqty{2\cos\frac{2\pi}7}z+1}\pqty{z^2-\pqty{2\cos\frac{4\pi}7}z+1}\pqty{z^2-\pqty{2\cos\frac{6\pi}7}z+1}}
+\end{aligned}\]
+\subsection*{(ii)}
+\[\begin{aligned}
+    &\cos\pqty{\frac17\pi}-\cos\pqty{\frac27\pi}+\cos\pqty{\frac37\pi}\\
+    &=\cos\pqty{\frac17\pi}-2\cos^2\pqty{\frac17\pi}+1+4\cos^3\pqty{\frac17\pi}-3\cos\pqty{\frac17\pi}\\
+    &=1-\pqty{}
+\end{aligned}\]
+\subsection*{(iii)}
+\[\begin{aligned}
+    &\cos\pqty{\frac17\pi}\cos\pqty{\frac27\pi}\cos\pqty{\frac37\pi}\\
+    &=\frac{2\sin\pqty{\frac17\pi}}{2\sin\pqty{\frac17\pi}}\cos\pqty{\frac17\pi}\cos\pqty{\frac27\pi}\cos\pqty{\frac37\pi}\\
+\end{aligned}\]
+
+\section*3
+\subsection*{(i)}
+\subsubsection*{(a)}
+\[T(\vb v)=\vb A\vb v=\bmqty{-1&7\\2&-6}\bmqty{6\\1}=\bmqty{1\\6}\]
+\end{document}

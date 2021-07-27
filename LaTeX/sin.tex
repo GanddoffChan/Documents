@@ -1,0 +1,50 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\begin{document}
+\[\begin{aligned}
+\sum\limits_{n}e^{i(x+\varphi_n)}&=\sum\limits_{n}(\cos(x+\varphi_n)+i\sin(x+\varphi_n))\\
+&=\sum\limits_{n}\cos(x+\varphi_n)+\sum\limits_{n}i\sin(x+\varphi_n)\\
+&=\sum\limits_{n}\cos(x+\varphi_n)+i\sum\limits_{n}\sin(x+\varphi_n)\\
+\end{aligned}\]
+
+\[\begin{aligned}
+\sum\limits_{n}e^{i(x+\varphi_n)}&=\sum\limits_{n}e^{ix+i\varphi_n}\\
+&=\sum\limits_{n}e^{ix}e^{i\varphi_n}\\
+&=e^{ix}\sum\limits_{n}e^{i\varphi_n}\\
+&=e^{ix}\sum\limits_{n}(\cos(\varphi_n)+i\sin(\varphi_n))\\
+&=e^{ix}\left(\sum\limits_{n}\cos(\varphi_n)+\sum\limits_{n}i\sin(\varphi_n)\right)\\
+&=e^{ix}\left(\sum\limits_{n}\cos(\varphi_n)+i\sum\limits_{n}\sin(\varphi_n)\right)\\
+&=e^{ix}(A+iB)\\
+&=e^{ix}\sqrt{A^2+B^2}e^{i\arg(A+iB)}\\
+&=\sqrt{A^2+B^2}e^{ix+i\arg(A+iB)}\\
+&=\sqrt{A^2+B^2}e^{i(x+\arg(A+iB))}\\
+&=\sqrt{A^2+B^2}(\cos(x+\arg(A+iB))+i\sin(x+\arg(A+iB)))\\
+&=\sqrt{A^2+B^2}\cos(x+\arg(A+iB))+i\sqrt{A^2+B^2}\sin(x+\arg(A+iB))
+\end{aligned}\]
+
+\[\boxed{
+\begin{cases}
+\sum\limits_{n}\sin(x+\varphi_n)=\sqrt{A^2+B^2}\sin(x+\arg(A+iB))\\
+\sum\limits_{n}\cos(x+\varphi_n)=\sqrt{A^2+B^2}\cos(x+\arg(A+iB))\\
+A=\sum\limits_{n}\cos(\varphi_n)\\
+B=\sum\limits_{n}\sin(\varphi_n)
+\end{cases}}\] 
+\newpage
+Example:
+
+\[\begin{aligned}
+&\phantom{=}\sin(2\pi(t+e))+\sin(2\pi t+69)+\sin(2\pi t+42^\circ)\\
+&=\sin(2\pi t+2\pi e)+\sin(2\pi t+69)+\sin(2\pi t+42^\circ)\\
+&=\sqrt{A^2+B^2}\sin(2\pi t+\arg(A+iB))
+\end{aligned}\]
+\[\begin{cases}
+A=\cos(2\pi e)+\cos(69)+\cos(42^\circ)\approx1.53856064504\\
+B=\sin(2\pi e)+\sin(69)+\sin(42^\circ)\approx-0.425861365902
+\end{cases}\]
+\[\sqrt{A^2+B^2}\approx1.59641058674\]
+\[\arg(A+iB)=\tan^{-1}\left(\frac BA\right)\approx-15.4716657207^\circ\]
+\[\sin(2\pi(t+e))+\sin(2\pi t+69)+\sin(2\pi t+42^\circ)\approx\boxed{1.60\sin(2\pi t-15.5^\circ)}\]
+\end{document}

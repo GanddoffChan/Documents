@@ -1,0 +1,23 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{physics}
+\title{Uncertainty}
+\author{GONDRO?}
+
+\begin{document}
+\maketitle
+
+\[\begin{cases}
+    A\in[a-\Delta a,a+\Delta a]\\
+    B\in[b-\Delta b,b+\Delta b]
+\end{cases}\]
+
+\[X=AB\]
+
+\[X_{\max}=A_{\max}B_{\max}=(a+\Delta a)(b+\Delta b)=ab+a\Delta b+b\Delta a+\Delta a\Delta b\]
+\[X_{\min}=A_{\min}B_{\min}=(a-\Delta a)(b-\Delta b)=ab-a\Delta b-b\Delta a+\Delta a\Delta b\]
+
+\[\frac{\Delta X}x=\frac{X_{\max}-X_{\min}}{2x}=\frac{ab+a\Delta b+b\Delta a+\Delta a\Delta b-(ab-a\Delta b-b\Delta a+\Delta a\Delta b)}{2ab}\]
+\end{document}

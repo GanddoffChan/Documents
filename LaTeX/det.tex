@@ -1,0 +1,70 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+\newcommand{\vv}{\mathbf}
+\newcommand{\rank}{\text{rank}}
+\newtheorem*{theorem}{Theorem}
+
+\begin{document}
+
+\begin{theorem}
+	$\det(\vv A\vv B)=\det(\vv A)\det(\vv B)$.
+\end{theorem}
+
+\begin{proof}
+	Let \(\vv A\) and \(\vv B\) be \(N\times N\) matrices.\\
+
+	Case 1. $\vv A$ is singular.
+	\[\det(\vv A)=0\implies\rank(\vv A)<N\]
+	\[\rank(\vv A\vv B)\leqslant\rank(\vv A)<N\]
+	Thus, $\vv A\vv B$ is singular.
+	\[\det(\vv A\vv B)=0=0\det(\vv B)=\det(\vv A)\det(\vv B)\]\\
+
+	Case 2. $\vv A$ is elementary.\\
+
+	Type 1. Let $\vv A=\vv T_{ij}$, where \(\vv T_{ij}\) is the matrix produced by 
+	exchanging row \(i\) and \(j\) of \(\vv I_N\).
+	It is clear that the following is true.
+	\[\det(\vv A\vv B)=-\det(\vv B)\]
+	\[\det(\vv A)=-1\]
+	Thus, 
+	\[\det(\vv A\vv B)=-\det(\vv B)=(-1)\det(\vv B)=\det(\vv A)\det(\vv B)\]
+
+	Type 2. Let $\vv A=\vv D_i(m)$, where \(\vv D_i(m)\) is the matrix produced from \(\vv I_N\) by 
+	multiplying row \(i\) by \(m\).
+	It is clear that the following is true.
+	\[\det(\vv A\vv B)=m\det(\vv B)\]
+	\[\det(\vv A)=m\]
+	Thus, 
+	\[\det(\vv A\vv B)=m\det(\vv B)=\det(\vv A)\det(\vv B)\]
+
+	Type 3. Let $\vv A=\vv L_{ij}(m)$, where \(\vv L_{ij}(m)\) is the matrix produced from \(\vv I_N\) by
+	adding \(m\) times row \(i\) to row \(j\).
+	It is clear that the following is true.
+	\[\det(\vv A\vv B)=\det(\vv B)\]
+	\[\det(\vv A)=1\]
+	Thus, 
+	\[\det(\vv A\vv B)=\det(\vv B)=1\det(\vv B)=\det(\vv A)\det(\vv B)\]\\
+
+	\newpage
+	Case 3. \(\vv A\) is general. Notice that \(\vv A\) can be rewritten as
+	a product of \(k\) elementary matrices, \(\vv E\), such that
+	\[\vv A=\prod\limits_{r=1}^k\vv E_r\]
+	\[\begin{aligned}
+		\det(\vv A\vv B)&=\det\left(\left(\prod\limits_{r=1}^k\vv E_r\right)\vv B\right)\\
+		&=\det\left(\vv E_k\left(\prod\limits_{r=1}^{k-1}\vv E_r\right)\vv B\right)\\
+		&=\det(\vv E_k)\det\left(\left(\prod\limits_{r=1}^{k-1}\vv E_r\right)\vv B\right)\\
+		&=\cdots\\
+		&=\left(\prod\limits_{r=1}^k\det(\vv E_r)\right)\det(\vv B)\\
+		&=\left(\prod\limits_{r=3}^k\det(\vv E_k)\right)\det(\vv E_2)\det(\vv E_1)\det(\vv B)\\
+		&=\left(\prod\limits_{r=3}^k\det(\vv E_k)\right)\det(\vv E_2\vv E_1)\det(\vv B)\\
+		&=\cdots\\
+		&=\det\left(\prod\limits_{r=1}^k\vv E_k\right)\det(\vv B)\\
+		&=\det(\vv A)\det(\vv B)\\
+	\end{aligned}\]
+	Therefore,
+	\[\det(\vv A\vv B)=\det(\vv A)\det(\vv B)\]
+\end{proof}
+
+\end{document}

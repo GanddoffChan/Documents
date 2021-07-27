@@ -1,0 +1,107 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{geometry}
+\newcommand{\E}{\mathrm E}
+\newcommand{\Var}{\mathrm{Var}}
+
+\begin{document}
+\section*1
+
+
+An unbiased estimate for \(p\), is:
+\[p\approx p_s=\frac{\sum x}n=\frac{900}{1000}=0.9\]
+
+Let \(X\sim B(1,p)\).
+\[\E(X)=p\approx p_s,\,\Var(X)=p(1-p)\approx p_s(1-p_s)\]
+
+It is clear that the sample proportion \(P_s=\bar X\). By the Central Limit Theorem, since \(n=1000\) is large, \(P_s\sim N\left(p_s,\frac{p_s(1-p_s)}n\right)\) approximately.
+
+It is know that the \(100(1-\alpha)\%\) confidence interval for \(p\) is given by:
+\[p_s\pm z_c\sqrt{\frac{p_s(1-p_s)}n},\,P(|Z|<z_c)=1-\alpha\]
+
+Thus, a 99.5\% confidence interval for \(p\), is:
+\[0.9\pm z_c\sqrt{\frac{0.9(0.1)}{1000}},\,P(|Z|<z_c)=99.5\%\]
+
+\[\begin{aligned}
+	P(|Z|<z_c)&=99.5\%\\
+	P(Z<z_c)&=0.9975\\
+	z_c&\approx2.8070
+\end{aligned}\]
+
+Therefore, a 99.5\% confidence interval for \(p\) \(\approx\boxed{(0.873,0.927)}\).
+
+When a large number of samples of 1000-letter time-of-arrival recordings are collected and each of their respective 99.5\% confidence intervals are calculated, approximately 99.5\% of these confidence intervals contains \(p\).
+
+\[\begin{aligned}
+	P(|Z|<z_c^\prime)=99.9\%\\
+	P(Z<z_c^\prime)=0.9995\\
+	z_c^\prime\approx3.2905\\
+\end{aligned}\]
+
+\[\begin{aligned}
+	z_c^\prime\sqrt{\frac{p_sq_s}{n^\prime}}&<0.005\\
+	n^\prime&>\left(\frac{z_c^\prime}{0.005}\right)^2(0.9)(0.1)\approx38979.24\\
+	\min\left(n^\prime\right)&=\boxed{38980}
+\end{aligned}\]
+
+\section*2
+\subsection*{(a)}
+\subsubsection*{(i)}
+
+\[\mu\approx\bar x=\frac{\sum(x-18)}n+18=\frac{388}{60}+18=\frac{367}{15}\approx\boxed{24.467}\]
+\[\sigma^2\approx s^2=\frac1{n-1}\left(\sum(x-18)^2-\frac{\left(\sum(x-18)\right)^2}n\right)=\frac1{59}\left(2550-\frac{388^2}{60}\right)=\frac{614}{885}\approx\boxed{0.694}\]
+
+\subsubsection*{(ii)}
+
+\[\begin{aligned}
+	P(|Z|<z_c)&=94\%\\
+	P(Z<z_c)&=0.97\\
+	z_c&\approx1.8808
+\end{aligned}\]
+
+\[\begin{aligned}
+	z_c\frac{\sigma}{\sqrt n}&=\frac{0.18}2\\
+	z_c\frac s{\sqrt n}&\approx0.09\\
+	n&=\left(\frac{z_c}{0.09}\right)^2\frac{614}{885}\\
+	 &\approx\boxed{303}
+\end{aligned}\]
+
+\subsubsection*{(iii)}
+
+\[\begin{aligned}
+	z_c^\prime\frac{\sigma}{\sqrt n}&>\frac{0.18}2\\
+	z_c^\prime\frac{\sigma}{\sqrt n}&>z_c\frac{\sigma}{\sqrt n}\\
+	z_c^\prime&>z_c\\
+	z_c^\prime&>1.8808\\
+	P(Z<z_c^\prime)&>0.97\\
+	P(|Z|<z_c^\prime)&>94\%\\
+\end{aligned}\]
+
+\subsection*{(b)}
+
+An unbiased estimate for \(p\), the passing rate, is:
+\[p\approx p_s=60\%=0.6\]
+
+Let \(X\sim B(1,p)\).
+\[\E(X)=p\approx p_s,\,\Var(X)=p(1-p)\approx p_s(1-p_s)\]
+
+It is clear that the sample passing rate \(P_s=\bar X\). By the Central Limit Theorem, since \(n=50\) is large, \(P_s\sim N\left(p_s,\frac{p_s(1-p_s)}n\right)\) approximately.
+
+It is know that the \(100(1-\alpha)\%\) confidence interval for \(p\) is given by:
+\[p_s\pm z_c\sqrt{\frac{p_s(1-p_s)}n},\,P(|Z|<z_c)=1-\alpha\]
+
+Thus, a 95\% confidence interval for \(p\), is:
+\[0.6\pm z_c\sqrt{\frac{0.6(0.4)}{50}},\,P(|Z|<z_c)=95\%\]
+
+\[\begin{aligned}
+	P(|Z|<z_c)&=95\%\\
+	P(Z<z_c)&=0.975\\
+	z_c&\approx1.9600
+\end{aligned}\]
+
+Therefore, a 95\% confidence interval for \(p\) \(\approx\boxed{(0.464,0.736)}\).
+
+\[a=\boxed{46.4},\,b=\boxed{73.6}\]
+
+This statement is false. One can think of an extreme case where classes only have a passing rate of 0\% or 100\%, while still satisfying the condition where a random sample of 50 scripts having a passing rate of 60\%, leading to the confidence interval concerned. This means that in reality, the percentage of classes having a passing rate between a\% and b\% can be any number in the interval \([0,100]\).
+\end{document}

@@ -1,0 +1,60 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{physics}
+\begin{document}
+\section{Logistic Growth Model}
+\[\begin{aligned}
+    \dv{P}{t}&=\pqty{\text{per-capita birth rate}}P-\pqty{\text{per-capita death rate}}P\\
+    &=\beta P-\pqty{\alpha+\gamma P}P\\
+    &=P\pqty{\beta-\alpha-\gamma P}\\
+    &=P\pqty{k-k\frac{\gamma}kP}\\
+    &=kP\pqty{1-\frac{\gamma}kP}\\
+    &=kP\pqty{1-\frac PN},\,N=\frac k\gamma
+\end{aligned}\]
+\\
+\[\begin{aligned}
+    \dv{P}{t}&=kP\pqty{1-\frac PN}\\
+    \dv{P}{t}&=k\frac{P\pqty{N-P}}N\\
+    \frac N{P\pqty{N-P}}\dd{P}&=k\dd{t}\\
+    \int\pqty{\frac1P+\frac1{N-P}}\dd{P}&=\int k\dd{t}\\
+    \ln\abs{P}-\ln\abs{N-P}&=kt+c\\
+    \ln\abs{\frac P{N-P}}&=kt+c\\
+    \frac P{N-P}&=Ae^{kt}\implies A=\frac{P_0}{N-P_0}\\
+    P&=ANe^{kt}-APe^{kt}\\
+    P+APe^{kt}&=ANe^{kt}\\
+    P\pqty{1+Ae^{kt}}&=ANe^{kt}\\
+    P&=\frac{ANe^{kt}}{1+Ae^{kt}}\\
+    &=\frac N{\frac1Ae^{-kt}+1}\\
+    &=\frac N{1+\frac{N-P_0}{P_0}e^{-kt}}\\
+    &=\frac N{1+be^{-kt}},\,b=\frac N{P_0}-1\\
+\end{aligned}\]
+\\
+\[\therefore\boxed{P(t)=\frac N{1+be^{-kt}}}\]
+\section{Constant Harvest Effort Model}
+\[\dv{P}{t}=kP\pqty{1-\frac PN}-hP\]
+\\
+\[\begin{aligned}
+    \dv{P}{t}&=0\\
+    kP\pqty{1-\frac PN}-hP&=0\\
+    P\pqty{k\pqty{1-\frac PN}-h}&=0\\
+\end{aligned}\]
+\\
+\[P=0\]
+\\
+\[\begin{aligned}
+    k\pqty{1-\frac PN}-h&=0\\
+    k\pqty{1-\frac PN}&=h\\
+    1-\frac PN&=\frac hk\\
+    \frac PN&=1-\frac hk\\
+    P&=N\pqty{1-\frac hk}	\\
+\end{aligned}\]
+\\
+\[\begin{aligned}
+    \max \dv{P}{t}&=\eval{\dv{P}{t}}_{P=\frac N2\pqty{1-\frac hk}}\\
+    &=\frac N2\pqty{1-\frac hk}\pqty{k\pqty{1-\frac1N\frac N2\pqty{1-\frac hk}}-h}
+\end{alinged}\]
+\end{document}

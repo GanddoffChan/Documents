@@ -1,0 +1,68 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{geometry}
+\newcommand{\cosec}{\mathrm{cosec}}
+
+\title{Differentiation}
+\date{}
+\author{Gordon Chan}
+\begin{document}
+\maketitle
+\section{Formal Definition}
+
+\[f^\prime(x)=\lim\limits_{h\to0}\frac{f(x+h)-f(x)}h\]
+
+\section{Example}
+
+\[\begin{aligned}
+    \ln(x)^\prime
+    &=\lim\limits_{h\to0}\frac{\ln(x+h)-\ln(x)}h\\
+    &=\lim\limits_{h\to0}\frac1h\ln\left(\frac{x+h}x\right)\\
+    &=\lim\limits_{h\to0}\ln\left(1+\frac hx\right)^{1/h},\, t=\frac xh\\
+    &=\lim\limits_{t\to\infty}\ln\left(1+\frac1t\right)^{t/x}\\
+    &=\lim\limits_{t\to\infty}\ln\left(1+\frac1t\right)^{t/x}\\
+    &=\ln\left(\lim\limits_{t\to\infty}\left(1+\frac1t\right)^t\right)^{\frac1x}\\
+    &=\ln\left(\lim\limits_{t\to\infty}\left(1+\frac1t\right)^t\right)^{\frac1x}\\
+    &=\ln(e)^{\frac1x}\\
+    &=\frac1x\qed
+\end{aligned}\]
+
+\section{Product Rule}
+
+\[(f(x)g(x))^\prime=f(x)g^\prime(x)+g(x)f^\prime(x)\]
+
+\section{Chain Rule}
+
+\[g(f(x))^\prime=g^\prime(f(x))f^\prime(x)\]
+
+\section{Quotient Rule}
+
+\[\left(\frac{f(x)}{g(x)}\right)^\prime=\frac{g(x)f^\prime(x)-f(x)g^\prime(x)}{g(x)^2}\]
+
+\subsection{Derivation from Product Rule and Chain Rule}
+
+\[\begin{aligned}
+    \left(\frac{f(x)}{g(x)}\right)^\prime
+    &=\left(f(x)\frac1{g(x)}\right)^\prime\\
+    &=f(x)\left(\frac1{g(x)}\right)^\prime+\frac1{g(x)}f^\prime(x)\\
+    &=f(x)\left(-\frac1{g(x)^2}g^\prime(x)\right)+\frac{f^\prime(x)}{g(x)}\\
+    &=-\frac{f(x)g^\prime(x)}{g(x)^2}+\frac{g(x)f^\prime(x)}{g(x)^2}\\
+    &=\frac{g(x)f^\prime(x)-f(x)g^\prime(x)}{g(x)^2}\qed
+\end{aligned}\]
+
+\section{Table of Derivatives}
+
+\[\def\arraystretch{2}
+\begin{array}[t]{|c|c|}
+    \hline
+    f(x)&f^\prime(x)\\
+    \hline
+    \sin^{-1}(x)&\displaystyle\frac1{\sqrt{1-x^2}}\\
+    \cos^{-1}(x)&\displaystyle-\frac1{\sqrt{1-x^2}}\\
+    \tan^{-1}(x)&\displaystyle\frac1{1+x^2}\\
+    \cosec^{-1}(x)&\displaystyle-\cosec(x)\cot(x)\\
+    \sec^{-1}(x)&\displaystyle\sec(x)\tan(x)\\
+    \hline
+\end{array}\]
+
+\end{document}

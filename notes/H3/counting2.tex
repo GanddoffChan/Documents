@@ -1,0 +1,18 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{concmath}
+\usepackage[T1]{fontenc}
+
+\begin{document}
+
+No of common divisors of \(a\) and \(b\) is the number of divisors of \(\gcd(a,b)\).
+
+There are \(2^{n-1}\) ways to right \(n\) as a sum of positive integers.
+
+\[\begin{aligned}
+	|A\cup B\cup C|&=|A\cup(B\cup C)|\\
+		       &=|A|+|B\cup C|-|A\cap(B\cup C)|\\
+		       &=|A|+|B\cup C|-|(A\cap B)\cup(B\cap C)|\\
+		       &=|A|+|B|+|C|-|(A\cap B)\cup(B\cap C)|\\
+\end{aligned}\]
+\end{document}

@@ -1,0 +1,19 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\newcommand{\dd}{\mathrm{d}}
+\begin{document}
+\[\begin{aligned}
+    \int_a^bf(x)\,\dd x&=\int_{-h}^hf(x+x_1)\,\dd x\\
+    &\approx\int_{-h}^hF(x)\,\dd x\\
+    &=\int_{-h}^h\left(Ax^2+Bx+C\right)\,\dd x\\
+    &=\left.\left(\frac A3x^3+\frac B2x^2+Cx\right)\right|_{-h}^h\\
+    &=\left(\frac A3h^3+\frac B2h^2+Ch\right)-\left(-\frac A3h^3+\frac B2h^2-Ch\right)\\
+    &=\frac{2A}3h^3+2Ch\\
+    &=\frac h3\left(2Ah^2+6C\right)\\
+    &=\frac h3\left(2Ah^2+2C+4C\right)\\
+    &=\frac h3\left(y_0+y_2+4y_1\right)\\
+\end{aligned}\]
+\end{document}

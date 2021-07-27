@@ -1,0 +1,56 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{setspace}
+\doublespacing{}
+\title{\(\sum\limits_{j=1}^\chi\left\lfloor\sqrt j\right\rfloor\)}
+\author{\(\mathbb{GONDRO}\)}
+\usepackage{concmath}
+\usepackage[T1]{fontenc}
+\begin{document}
+\maketitle
+
+Let \(\Xi(\chi)=\sum\limits_{j=1}^\chi\left\lfloor\sqrt j\right\rfloor\).
+
+\[\begin{aligned}
+    \Xi\left(n^2-1\right)&=1(0)+3(1)+5(2)+\cdots+(2n-1)(n-1)\\
+                       &=\sum\limits_{a=1}^n(2a-1)(a-1)\\
+                       &=\sum\limits_{a=1}^n\left(2a^2-3a+1\right)\\
+                       &=2\sum\limits_{x=1}^n{x}^2-3\sum\limits_{y=1}^n{y}+\sum\limits_{z=1}^n1\\
+                       &=2\left(\frac{n(n+1)(2n+1)}6\right)-3\left(\frac{n(n+1)}2\right)+n\\
+                       &=\frac{4n}3(n+1)(2n+1)-\frac{9n}6(n+1)+n\\
+                       &=\frac n6\left(2\left(2n^2+3n+1\right)-9(n+1)+6\right)\\
+                       &=\frac n6\left(4n^2+6n+2-9n-9+6\right)\\
+                       &=\frac n6\left(4n^2-3n-1\right)\\
+\end{aligned}\]
+
+\newpage
+\[\begin{aligned}
+    \Xi\left(n^2-1+k\right)&=\Xi\left(n^2-1\right)+kn\\
+                         &=\frac n6\left(4n^2-3n-1\right)+kn\\
+                         &=\frac n6\left(4n^2-3n-1+6k\right)
+\end{aligned}\]
+
+\[\chi=n^2-1+k\implies n=\left\lfloor\sqrt \chi\right\rfloor\]
+\[\chi=\left\lfloor\sqrt \chi\right\rfloor^2-1+k\implies k=\chi-\left\lfloor\sqrt \chi\right\rfloor^2+1\]
+\[\chi=n^2-1+k\implies\chi=\left\lfloor\sqrt \chi\right\rfloor^2-1+\left(\chi-\left\lfloor\sqrt \chi\right\rfloor^2+1\right)\]
+
+\[\begin{aligned}
+    \Xi(\chi)&=\Xi\left(\left\lfloor\sqrt \chi\right\rfloor^2-1+\left(\chi-\left\lfloor\sqrt \chi\right\rfloor^2+1\right)\right)\\
+           &=\frac{\left\lfloor\sqrt \chi\right\rfloor}6\left(4\left\lfloor\sqrt \chi\right\rfloor^2-3\left\lfloor\sqrt \chi\right\rfloor-1+6\left(\chi-\left\lfloor\sqrt \chi\right\rfloor^2+1\right)\right)\\
+           &=\frac{\left\lfloor\sqrt \chi\right\rfloor}6\left(4\left\lfloor\sqrt \chi\right\rfloor^2-3\left\lfloor\sqrt \chi\right\rfloor-1+6\chi-6\left\lfloor\sqrt \chi\right\rfloor^2+6\right)\\
+           &=\frac{\left\lfloor\sqrt \chi\right\rfloor}6\left(6\chi-2\left\lfloor\sqrt \chi\right\rfloor^2-3\left\lfloor\sqrt \chi\right\rfloor+5\right)\\
+\end{aligned}\]
+
+\[\therefore\boxed{\sum\limits_{j=1}^\chi\left\lfloor\sqrt j\right\rfloor=\frac{\left\lfloor\sqrt \chi\right\rfloor}6\left(6\chi-2\left\lfloor\sqrt \chi\right\rfloor^2-3\left\lfloor\sqrt \chi\right\rfloor+5\right)}\]
+
+\[\begin{aligned}
+    \sum\limits_{j=1}^{16}\left\lfloor\sqrt j\right\rfloor&=\frac{\left\lfloor\sqrt{16}\right\rfloor}6\left(6(16)-2\left\lfloor\sqrt{16}\right\rfloor^2-3\left\lfloor\sqrt{16}\right\rfloor+5\right)\\
+&=\frac{\left\lfloor4\right\rfloor}6\left(6(16)-2\left\lfloor4\right\rfloor^2-3\left\lfloor4\right\rfloor+5\right)\\
+&=\frac46\left(6(16)-2{(4)}^2-3(4)+5\right)\\
+&=\frac23\left(96-32-12+5\right)\\
+&=\frac23\left(57\right)\\
+&=\boxed{38}
+\end{aligned}\]
+\end{document}

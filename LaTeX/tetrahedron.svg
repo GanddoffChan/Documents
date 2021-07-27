@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="509.89026"
+   height="531.67474"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.0 r9654"
+   sodipodi:docname="tetraedr_corr.svg"
+   style="display:inline">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="227.20747"
+     inkscape:cy="269.92613"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer5"
+     showgrid="false"
+     inkscape:window-width="1280"
+     inkscape:window-height="964"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4"
+     inkscape:window-maximized="1"
+     fit-margin-top="10"
+     fit-margin-left="10"
+     fit-margin-right="10"
+     fit-margin-bottom="10"
+     showborder="false"
+     inkscape:showpageshadow="false" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="Fon"
+     style="display:inline"
+     sodipodi:insensitive="true">
+    <rect
+       style="fill:#f0f0f0;fill-opacity:1;stroke:none"
+       id="rect4226"
+       width="523"
+       height="536"
+       x="-1"
+       y="-4.325254" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Tetraedr"
+     style="display:inline"
+     transform="translate(-231.55485,-363.70398)">
+    <path
+       style="fill:none;stroke:#0000af;stroke-width:1.37;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:4.11, 4.11;stroke-dashoffset:0"
+       d="M 489.77918,393.01514 311.085,736.40076"
+       id="path3006"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#0000af;stroke-width:1.37;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:4.11, 4.11;stroke-dashoffset:0"
+       d="m 452.88,680.23076 249.72531,47.17938"
+       id="path3008"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#0000af;stroke-width:1.37;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:4.11, 4.11;stroke-dashoffset:0"
+       d="M 489.69964,393.09467 702.64813,727.53858"
+       id="path3010"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#0000af;stroke-width:1.37;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:4.11, 4.11;stroke-dashoffset:0"
+       d="M 702.5625,727.36733 310.74072,736.62395 454.28028,679.83722 489.80946,392.8525"
+       id="path3012"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer5"
+     inkscape:label="Sfera"
+     style="display:inline">
+    <path
+       sodipodi:type="arc"
+       style="fill:none;stroke:#000000;stroke-width:4.36338472;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:none;marker-mid:none;display:inline"
+       id="path2999"
+       sodipodi:cx="488.57144"
+       sodipodi:cy="670.93359"
+       sodipodi:rx="162.85715"
+       sodipodi:ry="162.85715"
+       d="m 651.42859,670.93359 a 162.85715,162.85715 0 1 1 -325.7143,0 162.85715,162.85715 0 1 1 325.7143,0 z"
+       transform="matrix(1.4841666,0,0,1.4841666,-468.17628,-725.04765)" />
+    <path
+       style="fill:none;stroke:#818181;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3, 3;stroke-dashoffset:0;display:inline"
+       d="m 29.41881,351.40548 c 22.77814,-55.60058 465.77378,-38.18656 454.18302,1.72358"
+       id="path3002"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path3004"
+       d="m 29.58146,351.24283 c -6.88322,43.45076 452.71657,44.9036 454.21129,0.78656"
+       style="fill:none;stroke:#000000;stroke-width:6.4759903;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+       sodipodi:nodetypes="cc" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer6"
+     inkscape:label="Linii"
+     style="display:inline">
+    <path
+       style="fill:none;stroke:#c200a8;stroke-width:1.37;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:4.11, 4.11;stroke-dashoffset:0;display:inline"
+       d="M 79.10633,373.04107 257.63015,270.63178"
+       id="path3014"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#c200a8;stroke-width:1.37;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:4.11, 4.11;stroke-dashoffset:0;display:inline"
+       d="m 222.8664,316.35553 34.76375,-45.5525 213.24906,92.8175"
+       id="path3016"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc" />
+    <path
+       style="fill:none;stroke:#c200a8;stroke-width:1.37;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:4.11, 4.11;stroke-dashoffset:0;display:inline"
+       d="m 258.16378,29.03512 -0.53363,322.42666"
+       id="path3018"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3, 3;stroke-dashoffset:0;display:inline"
+       d="m 256.94515,352.14678 -178.1,20.55"
+       id="path4199"
+       inkscape:connector-curvature="0" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="Oboznacheniya"
+     style="display:inline"
+     transform="translate(-231.55485,-363.70398)">
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Sans;-inkscape-font-specification:Sans"
+       x="694.53906"
+       y="716.52039"
+       id="text3799"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="F:\a\latex\moi_stati\tetraedr\tetraedr.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3801"
+         x="694.53906"
+         y="716.52039">D</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Sans;-inkscape-font-specification:Sans"
+       x="485.33008"
+       y="382.02039"
+       id="text3787"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="F:\a\latex\moi_stati\tetraedr\tetraedr.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3789"
+         x="485.33008"
+         y="382.02039">A</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Sans;-inkscape-font-specification:Sans"
+       x="490.6875"
+       y="634.52527"
+       id="text3803"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="F:\a\latex\moi_stati\tetraedr\tetraedr.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3805"
+         x="490.6875"
+         y="634.52527">O</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Sans;-inkscape-font-specification:Sans"
+       x="446.62988"
+       y="698.52039"
+       id="text3791"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="F:\a\latex\moi_stati\tetraedr\tetraedr.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3793"
+         x="446.62988"
+         y="698.52039">B</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Sans;-inkscape-font-specification:Sans"
+       x="491.2832"
+       y="721.02039"
+       id="text3807"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="F:\a\latex\moi_stati\tetraedr\tetraedr.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3809"
+         x="491.2832"
+         y="721.02039">H</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Sans;-inkscape-font-specification:Sans"
+       x="301.67578"
+       y="756.02039"
+       id="text3795"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="F:\a\latex\moi_stati\tetraedr\tetraedr.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"><tspan
+         sodipodi:role="line"
+         id="tspan3797"
+         x="301.67578"
+         y="756.02039">C</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.37px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline"
+       d="m 478.31383,715.86072 -0.48436,-13.5623 10.65609,-0.96874"
+       id="path4201"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

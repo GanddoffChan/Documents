@@ -1,0 +1,37 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{graphicx}
+\usepackage{concmath}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\begin{document}
+\[\mathbb{GONDRO}\]
+\[au_{n+2}+b_{n+1}+cu_n=0\]
+Lemma 1: \(u_n\propto x^n\).\\
+Lemma 2: \(u_n=\sum\limits_{r=1}^mA_rx_r^n\) (Linear Combination).\\
+Lemma 3: \(u_n=\left(\sum\limits_{r=1}^mA_rn^{r-1}\right)x^n\) (Repeated Roots).
+\[\begin{aligned}
+	au_{n+2}+b_{n+1}+cu_n&=0\\
+	a\left(kx^{n+2}\right)+b\left(kx^{n+1}\right)+c\left(kx^n\right)&=0\\
+	akx^nx^2+bkx^nx+ckx^n&=0\\
+	kx^n\left(ax^2+bx+c\right)&=0\\
+	ax^2+bx+c&=0\\
+\end{aligned}\]
+Case 1: \(b^2-4ac>0\implies x_1,x_2\in\mathbb R,\,x_1\ne x_2\).
+\[\boxed{u_n=Ax_1^n+Bx_2^n}\]
+Case 2: \(b^2-4ac=0\implies x_1,x_2\in\mathbb R,\,x_1=x_2\).
+\[\boxed{u_n=(A+Bn)x^n}\]
+Case 3: \(b^2-4ac<0\implies x_1,x_2\in\mathbb C,\,x_1=p-iq,\,x_2=p+iq\).
+\[\begin{aligned}
+	u_n&=Ax_1^n+Bx_2^n\\
+	   &=A(p-iq)^n+B(p+iq)^n\\
+	   &=A\left(|x|e^{-i|\arg(x)|}\right)^n+B\left(|x|e^{i|\arg(x)|}\right)^n\\
+	   &=A\left(|x|^ne^{-in|\arg(x)|}\right)+B\left(|x|^ne^{in|\arg(x)|}\right)\\
+	   &=A|x|^n(\cos(-n|\arg(x)|)+i\sin(-n|\arg(x)|))+B|x|^n(\cos(n|\arg(x)|)+i\sin(n|\arg(x)|))\\
+	   &=|x|^n(A\cos(n|\arg(x)|)-iA\sin(n|\arg(x)|)+B\cos(n|\arg(x)|)+iB\sin(n|\arg(x)|))\\
+	   &=|x|^n((B+A)\cos(n|\arg(x)|)+i(B-A)\sin(n|\arg(x)|))\\
+	   &=|x|^n(A\cos(n|\arg(x)|)+B\sin(n|\arg(x)|))\\
+	   &=\left(p^2+q^2\right)^\frac n2\left(A\cos\left(n\left|\tan^{-1}\left(\frac qp\right)\right|\right)+B\sin\left(n\left|\tan^{-1}\left(\frac qp\right)\right|\right)\right)
+\end{aligned}\]
+\[\boxed{u_n=\left(p^2+q^2\right)^\frac n2\left(A\cos\left(n\left|\tan^{-1}\left(\frac qp\right)\right|\right)+B\sin\left(n\left|\tan^{-1}\left(\frac qp\right)\right|\right)\right)}\]
+\end{document}

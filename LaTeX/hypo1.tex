@@ -1,0 +1,53 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\newcommand{\p}{p\text{-value}}
+
+\begin{document}
+\section*1
+
+Let the mean mass of the contents of a bag be \(\mu\) grams.
+\[\begin{cases}
+	H_0:\mu=10000\\
+	H_a:\mu\ne10000
+\end{cases}\]
+
+\[\bar x=\frac{\sum(x-10000)}{80}+10000\approx9968.6\]
+\[s^2=\frac1{79}\left(\sum(x-10000)^2-\frac{\left(\sum(x-10000)\right)^2}{80}\right)\approx24448\]
+
+Under \(H_0\), the test statistic \(\bar X\sim N\left(\mu,\frac{s^2}{n}\right)\) approximately.
+\[\p=2P\left(\bar X\leqslant\bar x\right)\approx0.072463\leqslant0.10\]
+
+Since \(\p\leqslant10\%\), \(H_0\) is rejected in favour of \(H_a\) and a conclusion is made that there is sufficient evidence at a 10\% significance level that the mean mass of a bag differs from 10 kg.
+
+`at the 10 \% significance level' means that there is a 10\% probability when the null hypothesis of the mean mass of the contents of a bag does not differ from 10 kg is rejected when in fact the mean mass is 10 kg.
+
+`\(\p\)' is the probability at which the test statistic \(\bar X\) is more or equally extreme as the sample statistic \(\bar x\).
+
+\newpage
+
+\section*2
+Let the children in Ms Patricia's school sleep an average of \(\mu\) hours.
+\[\begin{cases}
+	H_0:\mu=\mu_0=6.5\\
+	H_a:\mu<\mu_0=6.5
+\end{cases}\]
+
+\[\bar x=\frac{\sum x}n=6.325\]
+\[s^2=\frac n{n-1}\left(\frac{\sum x^2}n-\bar x^2\right)\approx0.12214\]
+
+Under \(H_0\), the test statistic \(T=\frac{\bar X-\mu_0}{S\sqrt{\frac1n}}\sim t(n-1)\).
+\[\p=P\left(T\leqslant\frac{\bar x-\mu_0}{s\sqrt{\frac1n}}\right)\approx0.099807>0.08\]
+
+Since \(\p>8\%\), \(H_0\) is not rejected and a conclusion is made that there is insufficient evidence at a 8\% significance level that the children in Ms Patricia's school sleep an average of fewer than 6.5 hours each night.
+\\
+\[T\sim t(14)\]
+\[s^2=\frac{15}{14}(0.849)=\frac{2547}{2800}\]
+\\
+\[\begin{aligned}
+	\p&\leqslant0.08\\
+	P\left(T\leqslant\frac{\bar x-6.5}{\frac{2547}{2800}\sqrt{\frac1{15}}}\right)&\leqslant0.08\\
+	\frac{\bar x-6.5}{\frac{2547}{2800}\sqrt{\frac1{15}}}&\leqslant a\approx-1.4839\\
+	\bar x&\leqslant\frac{2547a}{2800\sqrt{15}}+6.5\approx6.1515\\
+\end{aligned}\]
+\[\bar x\in[0,6.15]\]
+\end{document}

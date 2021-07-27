@@ -1,0 +1,99 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\newcommand{\vv}{\mathbf}
+\newcommand{\rref}{\mathrm{rref}}
+\newcommand{\nul}{\mathrm{nul}}
+\newcommand{\range}{\mathrm{range}}
+\newcommand{\nullity}{\mathrm{nullity}}
+\newcommand{\rank}{\mathrm{rank}}
+
+\begin{document}
+\section*1
+\subsection*{(i)}
+
+\[\begin{aligned}
+	\vv A&=\begin{bmatrix}1&3&-2&a\\2&-1&3&-5\\-3&-3&0&3\end{bmatrix}\\
+	     &\to\begin{bmatrix}6&18&-12&6a\\6&-3&9&-15\\-6&-6&0&6\end{bmatrix}\\
+	     &\to\begin{bmatrix}1&1&0&-1\\0&-9&9&-9\\0&12&-12&6a+6\end{bmatrix}\\
+	     &\to\begin{bmatrix}1&1&0&-1\\0&-2&2&-2\\0&2&-2&a+1\end{bmatrix}\\
+	     &\to\begin{bmatrix}1&1&0&-1\\0&1&-1&1\\0&0&0&a-1\end{bmatrix}=\rref(\vv A)
+\end{aligned}\]
+
+Given that the dimension of the null space of \(T\) is 2, the matrix \(\vv a\) must have 2 non-pivot columns.
+
+\[a-1=0\iff a=\boxed1\]
+
+	\[\nul(T)=\nul(\vv A)=\nul(\rref(\vv A))=\nul\left(\begin{bmatrix}1&1&0&-1\\0&1&-1&1\\0&0&0&0\end{bmatrix}\right)\]
+	\[x_4=\mu,\,x_3=\lambda,\,x_2=\lambda-\mu,\,x_1=-\lambda+\mu\]
+	\[\vv x=\begin{bmatrix}-\lambda+\mu\\\lambda-\mu\\\lambda\\\mu\end{bmatrix}
+	=\lambda\begin{bmatrix}-1\\1\\1\\0\end{bmatrix}
+	+\mu\begin{bmatrix}1\\-1\\0\\1\end{bmatrix}\]
+	Thus, a basis for the null space of \(T\) is:
+	\[\boxed{\left\{\begin{bmatrix}-1\\1\\1\\0\end{bmatrix},\begin{bmatrix}1\\-1\\0\\1\end{bmatrix}\right\}}\]
+
+\subsection*{(ii)}
+\[\dim(\range(T))=\rank(\vv A)=4-\nullity(\vv A)=4-2=2\]
+Thus, the range space of \(T\) is a plane.\qed
+\[R:\vv r=\lambda\begin{bmatrix}1\\2\\-3\end{bmatrix}
++\mu\begin{bmatrix}3\\-1\\-3\end{bmatrix},\,\lambda,\mu\in\mathbb R\]
+\[\vv n=\begin{bmatrix}3\\-1\\-3\end{bmatrix}\times\begin{bmatrix}1\\2\\-3\end{bmatrix}=\begin{bmatrix}9\\6\\7\end{bmatrix}\]
+\[\vv r\cdot\vv n=0\iff\vv r\cdot\begin{bmatrix}9\\6\\7\end{bmatrix}=0\]
+\[R:\boxed{9x+6y+7z=0}\]
+
+\subsection*{(iii)}
+\(R\cup V\) is a vector space implies that \(V\subset R\).
+\[\vv v\cdot\vv n=0\iff\begin{bmatrix}0\\b\\c\end{bmatrix}\cdot\begin{bmatrix}9\\6\\7\end{bmatrix}=0\]
+\[\boxed{6b+7c=0}\]
+
+\section*2
+If \(\vv x_1\), \(\vv x_2\) and \(\vv x_3\) are linearly dependent, then:
+
+
+\[\begin{aligned}
+	a\vv x_1+b\vv x_2+c\vv x_3&=\vv 0,\,a,b,c\in\mathbb R\backslash\{0\}\\
+	\vv M(a\vv x_1+b\vv x_2+c\vv x_3)&=\vv M\vv 0\\
+	\vv Ma\vv x_1+\vv Mb\vv x_2+\vv Mc\vv x_3&=\vv 0\\
+	a\vv M\vv x_1+b\vv M\vv x_2+c\vv M\vv x_3&=\vv 0,\,a,b,c\in\mathbb R\backslash\{0\}\\
+\end{aligned}\]
+Therefore, \(\vv M\vv x_1\), \(\vv M\vv x_2\) and \(\vv M\vv x_3\) are linearly dependent.
+
+\subsection*{(i)}
+\[\det\left(\begin{bmatrix}\vv y_1&\vv y_2&\vv y_3\end{bmatrix}\right)=0\]
+Since the matrix \(\begin{bmatrix}\vv y_1&\vv y_2&\vv y_3\end{bmatrix}\) is not full rank, the dimension of its column space is less than 3. This implies that the span of the vectors \(\vv y_1\), \(\vv y_2\) and \(\vv y_3\) has a dimension that is less than 3, which is the number of vectors. Therefore, \(\vv y_1\), \(\vv y_2\) and \(\vv y_3\) are linearly dependent.
+
+\subsection*{(ii)}
+\[\vv A\begin{bmatrix}\vv y_1&\vv y_2&\vv y_3\end{bmatrix}
+=\begin{bmatrix}2&6&4\\20&10&190\\34&2&368\end{bmatrix}
+\to\begin{bmatrix}1&0&11\\0&1&-3\\0&0&0\end{bmatrix}\]
+A basis for the linear space spanned by the vectors \(\vv y_1\), \(\vv y_2\) and \(\vv y_3\) is:
+\[\boxed{\left\{\begin{bmatrix}1\\10\\17\end{bmatrix},\begin{bmatrix}3\\5\\1\end{bmatrix}\right\}}\]
+
+\subsection*{(iii)}
+\[\nul(T)=\nul(\vv A)=\nul\left(\begin{bmatrix}-1&1&0\\0&4&2\\3&5&4\end{bmatrix}\right)=\nul\left(\begin{bmatrix}1&0&1/2\\0&1&1/2\\0&0&0\end{bmatrix}\right)\]
+\[x_3=\lambda,\,x_2=-\frac12\lambda,\,x_1=-\frac12\lambda\]
+\[\vv x=\begin{bmatrix}-\lambda/2\\-\lambda/2\\\lambda\end{bmatrix}
+=-\frac\lambda2\begin{bmatrix}1\\1\\-2\end{bmatrix}\]
+A basis for the null space of \(T\) is:
+\[\boxed{\left\{\begin{bmatrix}1\\1\\-2\end{bmatrix}\right\}}\]
+
+\subsection*{(iv)}
+\[T(\vv0)=\vv0\ne\begin{bmatrix}1\\6\\9\end{bmatrix}\]
+Since the zero vector is not contained by the set of solutions of the equation, it is not a vector space.
+
+It is obvious that:
+\[T\left(\begin{bmatrix}0\\1\\1\end{bmatrix}\right)=\begin{bmatrix}1\\6\\9\end{bmatrix}\]
+Thus,
+\[\vv x=\vv x_0+\vv x_p=k\begin{bmatrix}1\\1\\-2\end{bmatrix}+\begin{bmatrix}0\\1\\1\end{bmatrix}=\begin{bmatrix}k\\1+k\\1-2k\end{bmatrix},\,k\in\mathbb R\]
+\[\begin{aligned}
+	|\vv x|&=\left|\begin{bmatrix}k\\1+k\\1-2k\end{bmatrix}\right|\\
+	       &=\sqrt{k^2+(1+k)^2+(1-2k)^2}\\
+	       &=\sqrt{k^2+1+2k+k^2+1-4k+4k^2}\\
+	       &=\sqrt{2-2k+6k^2}\\
+	       &=\sqrt{2+6\left(-\frac k3+k^2\right)}\\
+	       &=\sqrt{2+6\left(-\frac1{36}+\frac1{36}-\frac k3+k^2\right)}\\
+	       &=\sqrt{2-\frac16+6\left(\frac16-k\right)^2}\\
+	       &=\sqrt{\frac{11}6+\frac16\left(1-6k\right)^2}\\
+	       &=\frac{\sqrt{6}}{6}\sqrt{11+\left(1-6k\right)^2}
+\end{aligned}\]
+\[\min(|\vv x|)=\frac{\sqrt6}6\sqrt{11}=\boxed{\frac{\sqrt{66}}6}\]
+\end{document}

@@ -1,0 +1,46 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\title{Complex Numbers}
+\date{\(\mathbb{THEODORE}\)}
+\author{\LaTeX}
+\begin{document}
+\maketitle
+
+\section{Definition of the Imaginary Unit}
+
+\[i^2=-1\]
+
+\section{Rectangular Form}
+
+\[z=x+iy,\,x,y\in\mathbb R\]
+
+\subsection{Conjugate}
+
+\[z:=x+iy\iff z^*=x-iy\]
+
+\section{Polar Form}
+
+\[z=re^{i\theta},\,r\in[0,\infty),\,\theta\in(-\pi,\pi]\]
+
+\subsection{Conjugate}
+
+\[z:=re^{i\theta}\iff z^*=re^{-i\theta}\]
+
+\section{Equation Relating the Two Forms}
+
+\[r=\sqrt{x^2+y^2}\]
+
+\[\theta=\arg(x+iy)=\begin{cases}
+    -\pi+\tan^{-1}\frac yx,\,x<0,y<0\\
+    -\frac\pi2,\,x=0,y<0\\
+    \tan^{-1}\frac yx,\,x>0,y<0\\
+    \tan^{-1}\frac yx,\,x>0,y\geqslant0\\
+    \frac\pi2,\,x=0,y>0\\
+    \pi+\tan^{-1}\frac yx,\,x<0,y\geqslant0\\
+\end{cases}\]
+
+\section{Conjugate Root Theorem}
+
+If \(p(z)\) is a polynomial in \(z\) whose coefficients are only real and \(p(z)=0\) has root \(z_1\), then \(z_1^*\) is also a root.
+
+\end{document}

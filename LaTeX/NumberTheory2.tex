@@ -1,0 +1,98 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{graphicx}
+\usepackage{concmath}
+\usepackage[T1]{fontenc}
+
+\begin{document}
+\section*1
+\subsection*{(a)}
+False. \[0+\sqrt2=\sqrt2\]
+\subsection*{(b)}
+Suppose \(x,y\in\mathbb Q\).
+\[x+y=\frac ab+\frac cd=\frac{ad+bc}{bd}=\frac pq\in\mathbb Q\]
+\[x\in\mathbb Q\land y\in\mathbb Q\implies x+y\in\mathbb Q\]
+\[x+y\not\in\mathbb Q\implies x\not\in\mathbb Q\lor y\not\in\mathbb Q\qed\]
+
+\section*2
+\subsection*{(a)}
+Suppose \(\sqrt3+\sqrt5\in\mathbb Q\).
+\[\begin{aligned}
+	\sqrt3+\sqrt5&=\frac pq\\
+	q\sqrt3+q\sqrt5&=p\\
+	q\sqrt5&=p-q\sqrt3\\
+	5q^2&=p^2-2pq\sqrt3+3q^2\\
+	2pq\sqrt3&=p^2-2q^2\\
+	12p^2q^2&=p^4-4p^2q^2+4q^4\\
+	16p^2q^2&=p^4+4q^4\\
+	(4pq)^2&=\left(p^2\right)^2+\left(2q^2\right)^2\\
+\end{aligned}\]
+\(p\) must be even
+\[\begin{aligned}
+	\sqrt3+\sqrt5&=\frac pq\\
+	q\sqrt3+q\sqrt5&=p\\
+	q\sqrt3&=p-q\sqrt5\\
+	3q^2&=p^2-2pq\sqrt5+5q^2\\
+	2pq\sqrt5&=p^2+2q^2\\
+	20p^2q^2&=p^4+4p^2q^2+4q^4\\
+	16p^2q^2&=p^4+4q^4\\
+	\left(p^2\right)^2+\left(2q^2\right)^2&=(4pq)^2\\
+\end{aligned}\]
+\[\begin{aligned}
+	\sqrt3+\sqrt5&=\frac pq\\
+	\sqrt3&=\frac pq-\sqrt5\\
+	3&=\frac{p^2}{q^2}-2\sqrt5\frac pq+5\\
+	-2q^2&=p^2-2q\sqrt5\\
+\end{aligned}\]
+
+\section*3
+Suppose there exists two odd integers, \(m\) and \(n\),
+such that the sum of their squares is divisible by 4.
+\[\begin{aligned}
+	m^2+n^2&=4k\\
+	{(2a+1)}^2+{(2b+1)}^2&=4k\\
+	4a^2+4a+1+4b^2+4b+1&=4k\\
+	4a^2+4a+4b^2+4b+2&=4k\\
+	2\left(a^2+a+b^2+b\right)+1&=2k\quad(\implies\impliedby)
+\end{aligned}\]
+The left hand side is odd and the right hand side is even, resulting in a contradiction.
+Therefore, the sum of square of two odd integers is not dividible by 4.\qed
+
+\section*4
+Suppose their is sum odd interger \(a\) such that \(a^2+1=2^n\) with \(n\geqslant2\).
+\[\begin{aligned}
+	a^2+1&=2^n\\
+	{(2k+1)}^2+1&=2^n\\
+	4k^2+4k+1+1&=2^n\\
+	4k^2+4k+2&=2^n\\
+	2k^2+2k+1&=2^{n-1}\\
+	2\left(k^2+k\right)+1&=2\left(2^{n-2}\right)\quad(\implies\impliedby)
+\end{aligned}\]
+The left hand side is odd and the right hand side is even, resulting in a contradiction.\\
+Suppose their is sum even interger \(a\) such that \(a^2+1=2^n\) with \(n\geqslant2\).
+\[\begin{aligned}
+	a^2+1&=2^n\\
+	{(2k)}^2+1&=2^n\\
+	4k^2+1&=2^n\\
+	2\left(2k^2\right)+1&=2\left(2^{n-1}\right)\quad(\implies\impliedby)
+\end{aligned}\]
+The left hand side is odd and the right hand side is even, resulting in a contradiction.
+Therefore, there are no integers \(a\) and \(n\) with \(n\geqslant2\) and 
+\(a^2+1=2^n\).\qed
+
+\section*5
+Suppose there is some positive integer \(c<\gcd(a,b)\) such that \(c=ax+by\)
+for some integers \(x\) and \(y\).
+\[\]
+
+\section*6
+Suppose \(n\) is a perfect square.
+\[\begin{aligned}
+	n&=m^2\\
+	n&=\left(p_1^{k_1}p_2^{k_2}\cdots p_t^{k_t}\right)^2\\
+	n&=p_1^{2k_1}p_2^{2k_2}\cdots p_t^{2k_t}\\
+	n&=\left(p_1^{k_1}\right)^2\left(p_2^{k_2}\right)^2\cdots\left(p_t^{k_t}\right)^2\\
+	\sqrt n&=\sqrt{\left(p_1^{k_1}\right)^2\left(p_2^{k_2}\right)^2
+	\cdots\left(p_t^{k_t}\right)^2}\\
+\end{aligned}\]
+\end{document}

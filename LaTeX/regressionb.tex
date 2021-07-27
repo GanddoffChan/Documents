@@ -1,0 +1,25 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+
+\begin{document}
+
+\[y-\bar y=b(x-\bar x)\iff y=(\bar y-b\bar x)+bx\equiv y=a+bx\]
+
+\[\implies a=\bar y-b\bar x\]
+
+\[\begin{aligned}
+	v_i&=y_i-(a+bx_i)\\
+	&=y_i-(\bar y-b\bar x+bx_i)\\
+	&=y_i-\bar y+b(\bar x-x_i)\\
+	\sum v_i^2&=\sum(y_i-\bar y+b(\bar x-x_i))^2\\
+	\left(\sum v_i^2\right)^\prime&=\sum2(y_i-\bar y+b(\bar x-x_i))(\bar x-x_i)\\
+\end{aligned}\]
+
+\[\begin{aligned}
+	\left(\sum v_i^2\right)^\prime&=0\\
+	\sum2(y_i-\bar y+b(\bar x-x_i))(\bar x-x_i)&=0\\
+	\sum(y_i-\bar y)(\bar x-x_i)+b\sum (\bar x-x_i)^2&=0\\
+	b\sum (x_i-\bar x)^2&=\sum(y_i-\bar y)(x_i-\bar x)\\
+	b&=\boxed{\frac{\sum(y_i-\bar y)(x_i-\bar x)}{\sum (x_i-\bar x)^2}}\\
+\end{aligned}\]
+\end{document}

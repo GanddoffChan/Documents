@@ -1,0 +1,60 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{geometry}
+\usepackage{physics}
+
+\begin{document}
+\section*4
+Let \(P(n):\sum\limits_{r=1}^n\sin(2rx)\sin x=\sin(nx)\sin(n+1)x\).
+\[n=1\implies\sum\limits_{r=1}^1\sin(2rx)\sin x=\sin(2x)\sin x=\sin(1x)\sin(1+1)x
+\implies P(1)\to\top\]
+Assume \(\left(\exists k\in\mathbb Z^+\right)P(n)\to\top\implies\sum\limits_{r=1}^k\sin(2rx)\sin x=\sin(kx)\sin(k+1)x\).
+\[\begin{aligned}
+    n=k+1\implies&\phantom{=}\sum\limits_{r=1}^n\sin(2rx)\sin x\\
+         &=\sum\limits_{r=1}^{k+1}\sin(2rx)\sin x\\
+         &=\sum\limits_{r=1}^{k}\sin(2rx)\sin x+\sin(2(k+1)x)\sin x\\
+         &=\sin(kx)\sin(k+1)x+\sin(2(k+1)x)\sin x\\
+         &=\sin(kx)\sin(kx+x)+\sin(2kx+2x)\sin x\\
+         &=-\frac12\left(-2\sin\frac12(2kx)\sin\frac12(2kx+2x)-2\sin\frac12(4kx+4x)\sin\frac12(2x)\right)\\
+         &=-\frac12\left(\cos(2kx+x)-\cos x+\cos(2kx+3x)-\cos(2kx+x)\right)\\
+         &=-\frac12\left(\cos(2kx+3x)-\cos x\right)\\
+         &=-\frac12\left(-2\sin\frac12(2kx+4x)\sin\frac12(2kx+2x)\right)\\
+         &=\sin(kx+2x)\sin(kx+x)\\
+         &=\sin(k+1)x\sin((k+1)+1)x\\
+         &=\sin(nx)\sin(n+1)x\implies P(n+1)\to\top
+\end{aligned}\]
+\[((P(1)\to\top)\land(P(k)\to\top\implies P(k+1)\to\top))\implies\left(\forall n\in\mathbb Z^+\right)P(n)\to\top\]
+\[\therefore\sum\limits_{r=1}^n\sin(2rx)\sin x=\sin(nx)\sin(n+1)x,\,\forall n\in\mathbb Z^+\qed\]
+\[\begin{aligned}
+    \int_{\frac\pi4}^{\frac\pi2}\frac{\sin3x\sin4x}{\sin x}\dd{x}
+    &=\int_{\frac\pi4}^{\frac\pi2}\frac{\sin3x\sin(3+1)x}{\sin x}\dd{x}\\
+    &=\int_{\frac\pi4}^{\frac\pi2}\frac{\sum\limits_{r=1}^3\sin(2rx)\sin x}{\sin x}\dd{x}\\
+    &=\int_{\frac\pi4}^{\frac\pi2}\frac{\sin(2x)\sin x+\sin(4x)\sin x+\sin(6x)\sin x}{\sin x}\dd{x}\\
+    &=\int_{\frac\pi4}^{\frac\pi2}\left(\sin(2x)+\sin(4x)+\sin(6x)\right)\dd{x}\\
+    &=\eval{\pqty{-\frac12\cos2x-\frac14\cos4x-\frac16\cos6x}}_{\frac\pi4}^{\frac\pi2}\\
+    &=-\frac12(-1)-\frac14(0)-\frac16(-1)\\
+    &=\boxed{\frac23}
+\end{aligned}\]
+
+\section*5
+Let \(P(n):7\mid10^{3n}+13^{n+1}\).
+\[n=1\implies10^{3n}+13^{n+1}=10^3+13^2=1169=7(169)\implies P(1)\to\top\]
+Assume \(\left(\exists k\in\mathbb Z^+\right)P(k)\to\top\implies7\mid10^{3k}+13^{k+1}\).
+\[\begin{aligned}
+    10^{3k}+13^{k+1}&=7m,\,m\in\mathbb Z\\
+    13^{k+1}&=7m-10^{3k}
+\end{aligned}\]
+\[\begin{aligned}
+    n=k+1\implies10^{3n}+13^{n+1}&=10^{3(k+1)}+13^{(k+1)+1}\\
+                    &=10^{3k+3}+13^{k+2}\\
+                    &=1000\cdot10^{3k}+13\cdot13^{k+1}\\
+                    &=1000\left(10^{3k}\right)+13\left(7m-10^{3k}\right)\\
+                    &=1000\left(10^{3k}\right)+13(7m)-13\left(10^{3k}\right)\\
+                    &=987\left(10^{3k}\right)+7(13m)\\
+                    &=7\cdot141\left(10^{3k}\right)+7(13m)\\
+                    &=7\left(141\left(10^{3k}\right)+13m\right)\\
+                    &=7M,\,M\in\mathbb Z\implies P(k+1)\to\top\\
+\end{aligned}\]
+\[((P(1)\to\top)\land(P(k)\to\top\implies P(k+1)\to\top))\implies\left(\forall n\in\mathbb Z^+\right)P(n)\to\top\]
+\[\therefore7\mid10^{3n}+13^{n+1},\,\forall n\in\mathbb Z^+\qed\]
+\end{document}

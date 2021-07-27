@@ -1,0 +1,108 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+
+\begin{document}
+
+\section*{1}
+\subsection*{(i)}
+The event of each students being sick are must be independent. This condition may not be met because if a student has transmissive diseases, the students close to that student are more likely to obtain those diseases, such that the event of each of them being sick is dependent on one another.
+The probability of each student being sick must be a constant. This condition may not be met because the probability can fluctuate depending on the time of the year, i.e. when it is flu seasons.
+
+\subsection*{(ii)}
+\[\begin{aligned}
+	P\left(25^\text{th}\to5^\text{th}\text{sick}\right)
+	&=P\left(4\text{ sick in first }24\land25^\text{th}\to\text{sick}\right)\\
+	&=\binom{24}4{\left(\frac15\right)}^4{\left(\frac45\right)}^{20}\cdot\frac15\\
+	&\approx\boxed{0.0392}
+\end{aligned}\]
+
+\subsection*{(iii)}
+Let \(X\sim B\left(n,\frac15\right)\).
+\[\begin{aligned}
+	P(X\geqslant6)&>0.95\\
+	1-P(X<6)&>0.95\\
+	\sum\limits_{r=0}^5\binom nr{\left(\frac15\right)}^r{\left(\frac45\right)}^{n-r}&<0.05\\
+	n&\geqslant50\\
+	\min(n)&=\boxed{50}
+\end{aligned}\]
+
+\section*{2}
+\subsection*{(i)}
+Let \(X\sim G(10\%)\).
+\[P(X<7)=1-P(X>6)=1-(1-10\%)^6\approx\boxed{0.469}\]
+\subsection*{(ii)}
+Let \(Y_1\sim B(15,10\%)\) and \(Y_2\sim B(10,10\%)\).
+\[\begin{aligned}
+	&P(Y_1>4)+P(Y_1=4)P(Y_2=0)\\
+	&=1-P(Y_1\leqslant4)+P(Y_1=4)P(Y_2=0)\\
+	&=1-\sum\limits_{r=0}^4\binom{15}r(10\%)^r(90\%)^{15-r}+\binom{15}4(10\%)^4(90\%)^{11}\left(1-(90\%)^{10}\right)\\
+	&=0.0127\dots+(0.0428\dots)(0.651\dots)\\
+	&\approx\boxed{0.0406}
+\end{aligned}\]
+
+\section*{3}
+\[\begin{cases}
+	L_n\sim P(2n)\\
+	F_n\sim P(3n)\\
+\end{cases}\]
+\subsection*{(i)}
+\[\begin{cases}
+	L_3\sim P(6)\\
+	F_3\sim P(9)\\
+\end{cases}\]
+\[\begin{aligned}
+	&P(L_3\geqslant10\lor F_3\geqslant10)\\
+	&=P(L_3\geqslant10)+P(F_3\geqslant10)-P(L_3\geqslant10)P(F_3\geqslant10)\\
+	&=1-P(L_3<10)+1-P(F_3<10)-(1-P(L_3<10))(1-P(F_3\geqslant10))\\
+	&=1-P(L_3<10)P(F_3<10)\\
+	&=1-\left(\sum\limits_{r=0}^9e^{-6}\frac{6^r}{r!}\right)\left(\sum\limits_{r=0}^9e^{-9}\frac{9^r}{r!}\right)\\
+	&=1-(0.916\dots)(0.584\dots)\\
+	&\approx\boxed{0.462}
+\end{aligned}\]
+\subsection*{(ii)}
+\[\begin{aligned}
+	P(L_3>m)&<0.7\\
+	1-P(L_3\leqslant m)&<0.7\\
+	P(L_3\leqslant m)&>0.3\\
+	\sum\limits_{r=0}^me^{-6}\frac{6^r}{r!}&>0.3\\
+	m&>4\\
+	\min(m)&=\boxed5
+\end{aligned}\]
+
+\section*{4}
+\[X_r\sim G\left(1-\frac r{10}\right)\]
+\subsection*{(i)}
+\[P(X_r=x)=\left(1-\left(1-\frac r{10}\right)\right)^{x-1}\left(1-\frac r{10}\right)=\boxed{\left(1-\frac r{10}\right)\left(\frac r{10}\right)^{x-1}}\]
+\[\begin{aligned}
+	\sum\limits_{r=0}^\infty a^r&=\frac1{1-a}\\
+	\sum\limits_{r=1}^\infty a^r&=\frac a{1-a}\\
+	\sum\limits_{r=1}^\infty ra^{r-1}&=\frac1{(1-a)^2}\\
+\end{aligned}\]
+\[\begin{aligned}
+	E(X_r)&=\sum\limits_{x=1}^\infty xP(X_r=x)\\
+	      &=\left(1-\frac r{10}\right)\sum\limits_{x=1}^\infty x\left(\frac r{10}\right)^{x-1}\\
+	      &=\left(1-\frac r{10}\right)\frac1{\left(1-\frac r{10}\right)^2}\\
+	      &=\frac1{1-\frac r{10}}\\
+	      &=\frac1{\frac{10}{10}-\frac r{10}}\\
+	      &=\boxed{\frac1{10}(10-r)}
+\end{aligned}\]
+\subsection*{(ii)}
+\[P(X_{r+1}+X_r\leqslant a\mid X_r=b)=P(X_{r+1}+b\leqslant a)=P(X_{r+1}\leqslant a-b)\qed\]
+\[\begin{aligned}
+	&P(X_{r+1}+X_r\leqslant a\mid X_r=b)\\
+	&=P(X_{r+1}\leqslant2)\\
+	&=\left(1-\frac{r+1}{10}\right)\left(\frac{r+1}{10}\right)^0+\left(1-\frac{r+1}{10}\right)\left(\frac{r+1}{10}\right)^1\\
+	&=\left(1-\frac{r+1}{10}\right)\left(1+\frac{r+1}{10}\right)\\
+	&=1-\left(\frac{r+1}{10}\right)^2\qed
+\end{aligned}\]
+\subsection*{(iii)}
+\[Y=\sum\limits_{r=0}^9X_r\]
+\[\begin{aligned}
+	E(Y)&=E\left(\sum\limits_{r=0}^9X_r\right)\\
+	    &=\sum\limits_{r=0}^9E(X_r)\\
+	    &=\frac1{10}\sum\limits_{r=0}^9(10-r)\\
+	    &=\frac1{10}\left(10\cdot10-\frac{9\cdot10}2\right)\\
+	    &=10-\frac92\\
+	    &=\boxed{\frac{11}2}
+\end{aligned}\]
+\end{document}
