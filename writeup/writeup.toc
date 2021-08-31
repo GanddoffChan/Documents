@@ -1,0 +1,27 @@
+\contentsline {part}{Part 1: Composition Techniques}{3}{}%
+\contentsline {section}{\numberline {1}Wonky Steps (rhythmic counterpoint)}{3}{}%
+\contentsline {subsection}{\numberline {1.1}Working Timeline}{4}{}%
+\contentsline {subsection}{\numberline {1.2}Write-up on {\bf Wonky Steps}}{4}{}%
+\contentsline {subsubsection}{\numberline {1.2.1}Compositional Approach}{4}{}%
+\contentsline {subsubsection}{\numberline {1.2.2}Structure and Motive Development}{4}{}%
+\contentsline {subsubsection}{\numberline {1.2.3}Rhythmic Technique Explored}{5}{}%
+\contentsline {subsection}{\numberline {1.3}Final Version}{5}{}%
+\contentsline {section}{\numberline {2}Infree (tone clusters)}{12}{}%
+\contentsline {subsection}{\numberline {2.1}Working Timeline}{13}{}%
+\contentsline {subsection}{\numberline {2.2}Write-up on {\bf Infree}}{13}{}%
+\contentsline {subsubsection}{\numberline {2.2.1}Introduction}{13}{}%
+\contentsline {subsubsection}{\numberline {2.2.2}Harmony}{13}{}%
+\contentsline {subsubsection}{\numberline {2.2.3}Motifs}{13}{}%
+\contentsline {subsection}{\numberline {2.3}Final Version}{14}{}%
+\contentsline {section}{\numberline {3}Space Dust (twelve-tone serialism)}{27}{}%
+\contentsline {subsection}{\numberline {3.1}Working Timeline}{28}{}%
+\contentsline {subsection}{\numberline {3.2}Write-up on {\bf Space Dust}}{28}{}%
+\contentsline {subsubsection}{\numberline {3.2.1}Compositional Approach}{28}{}%
+\contentsline {subsubsection}{\numberline {3.2.2}Harmonic Structure and Motivic Development}{28}{}%
+\contentsline {subsubsection}{\numberline {3.2.3}Musical Effects}{28}{}%
+\contentsline {subsubsection}{\numberline {3.2.4}Technique Explored}{28}{}%
+\contentsline {subsection}{\numberline {3.3}Final Version}{29}{}%
+\contentsline {part}{Part 2: Composition}{36}{}%
+\contentsline {section}{\numberline {4}Axiomatic Approximation (for Clarinet Quintet)}{36}{}%
+\contentsline {subsection}{\numberline {4.1}Working Timeline}{37}{}%
+\contentsline {subsection}{\numberline {4.2}Final Version}{37}{}%
