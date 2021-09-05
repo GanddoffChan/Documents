@@ -1,0 +1,7 @@
+(tempo! 69)
+
+organ:
+    V1: o4 <c1/>e/g/c <b/>d/g/b <a/>c/e/a <g/b/>e/g <f2/a/>c/f <f/a/>d/f <g/>c/e/g <g/b/>d/g <c0.5/>c/e/g/c
+    V2: (fff) o2 c1 < g a e f2 >d g <g >c0.5
+    V3: (fff) o1 c1 < g a e f2 >d g <g >c0.5
+    V4: (fff) o0 c1 < g a e f2 >d g <g >c0.5
