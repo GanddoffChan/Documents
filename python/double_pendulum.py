@@ -1,4 +1,4 @@
-from tkinter import *
+from Tkinter import *
 from math import *
 
 def sgn(x):

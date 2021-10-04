@@ -1,0 +1,61 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\newcommand{\vv}{\mathbf}
+\newcommand{\rank}{\mathrm{rank}}
+\newcommand{\range}{\mathrm{range}}
+\newcommand{\nullity}{\mathrm{nullity}}
+
+\begin{document}
+\[T:\mathbb R^n\to\mathbb R^m\]
+The matrix \(A\) represents \(T\), \(A\) is \(m\times n\).
+\[T(\vv x)=A\vv x,\, \vv x\in\mathbb R^n\]
+Also,
+\[A\vv x=\vv v,\, \vv v \in\mathbb R^m\]
+\[\rank(T)=\dim(\range(T))\leqslant m\]
+\[S:\mathbb R^m\to\mathbb R^n\]
+The matrix \(B\) represents \(S\), \(B\) is \(n\times m\).
+\[S(\vv y)=B\vv y,\, \vv y\in\mathbb R^m\]
+Also,
+\[B\vv y=\vv u,\, \vv u \in\mathbb R^n\]
+\[\rank(S)=\dim(\range(S))\leqslant n\]
+By rank-nullity theorem,
+\[
+    \begin{cases}
+    \rank(T)+\nullity(T)=n\\
+    \rank(S)+\nullity(S)=m\\
+\end{cases}
+\implies
+    \begin{cases}
+    \rank(T)=n\\
+    \rank(S)=m\\
+    \end{cases}\]
+\[
+    \begin{cases}
+    m\geqslant\rank(T)=n\\
+    n\geqslant\rank(S)=m\\
+\end{cases}
+    \begin{cases}
+    m\geqslant n\\
+    n\geqslant m\\
+\end{cases}
+\implies m=n\qed
+\]
+
+\[\lim\limits_{n\to\infty}A^n=A_\infty\]
+\[\lim\limits_{n\to\infty}A^n\vv v=A_\infty\vv v=\vv v_\infty\]
+\[\begin{aligned}
+    A_\infty\vv v&=\vv v_\infty\\
+    AA_\infty\vv v&=A\vv v_\infty\\
+    A_\infty\vv v&=A\vv v_\infty\\
+    AA_\infty\vv v&=AA\vv v_\infty\\
+    A_\infty\vv v&=A^2\vv v_\infty\\
+    &\vdots\\
+    A_\infty\vv v&=A_\infty\vv v_\infty\\
+    \vv v&=\vv v_\infty\\
+    A\vv v&=A\vv v_\infty\\
+    A\vv v&=\vv v_\infty\\
+    A\vv v&=\vv v\\
+    A\vv v&=1\vv v\qed\\
+\end{aligned}\]
+
+\end{document}
