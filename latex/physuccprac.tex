@@ -1,0 +1,19 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+
+\begin{document}
+Let \(x=R_X\) and \(y=R_Y\).
+\[I_1=\frac\varepsilon{\frac{xy}{x+y}+x}\]
+\[I_2=\frac\varepsilon{\frac x2+y}\]
+\[\begin{aligned}
+    \frac{I_1}{I_2}&=\frac{\frac x2+y}{\frac{xy}{x+y}+x}\\
+    &=\frac{(x+y)x+2(x+y)y}{2xy+2(x+y)x}\\
+    &=\frac{x^2+xy+2xy+2y^2}{2xy+2x^2+2xy}\\
+    &=\frac{x^2+3xy+2y^2}{2x^2+4xy}\\
+    &=\frac{(x+2y)(x+y)}{2x(x+2y)}\\
+    &=\frac{x+y}{2x}\\
+    &=\frac{y}{2x}+\frac12\\
+\end{aligned}\]
+
+\[\boxed{\frac{I_1}{I_2}=\frac{R_Y}{2R_X}+\frac12}\]
+\end{document}

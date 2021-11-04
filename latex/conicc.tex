@@ -1,0 +1,70 @@
+\documentclass[a4paper]{article}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+
+\begin{document}
+Suppose \((x_0,y_0)=(0,0)\) and directrix is \(\ell:x=-d\).
+The locus of point \(P(x,y)\) has eccentricity \(e\). Clearly, \(F(de,0)\) is the focus of such locus. From the definition of eccentricity,
+\[\begin{aligned}
+    e&=\frac{PF}{P\ell}\\
+    e&=\frac{\sqrt{(x-de)^2+y^2}}{x-(-d)}\\
+    e^2&=\left(\frac{\sqrt{(x-de)^2+y^2}}{x+d}\right)^2\\
+    e^2&=\frac{(x-de)^2+y^2}{(x+d)^2}\\
+    e^2&=\frac{x^2-2dex+d^2e^2+y^2}{x^2+2dx+d^2}\\
+    e^2x^2+2de^2x+d^2e^2&=x^2-2dex+d^2e^2+y^2\\
+    e^2x^2+2de^2x&=x^2-2dex+y^2\\
+    \left(1-e^2\right)x^2-2de(1+e)x+y^2&=0\\
+    (1-e)(1+e)x^2-2de(1+e)x+y^2&=0\\
+    (1+e)x((1-e)x-2de)+y^2&=0
+\end{aligned}\]
+
+For \(e=1\),
+\[\begin{aligned}
+    (1+1)x((1-1)x-2d(1))+y^2&=0\\
+    2x(-2d)+y^2&=0\\
+    -4dx+y^2&=0\\
+\end{aligned}\]
+
+\[
+    y^2&=4dx
+
+For \(e\ne1\), the centre is in the middle of the two x-intercepts.
+Clearly, one of the x-intercepts is \((0,0)\).
+To find the other one, set \(y=0\ne x\).
+
+\[\begin{aligned}
+    (1+e)x((1-e)x-2de)+0^2&=0\\
+    (1+e)x((1-e)x-2de)&=0\\
+    (1-e)x-2de&=0\\
+    (1-e)x&=2de\\
+    x&=\frac{2de}{1-e}\\
+\end{aligned}\]
+
+Thus, the centre is at \(\left(\frac{de}{1-e},0\right)\).
+Now, replacing \(x\) with \(\left(x+\frac{de}{1-e}\right)\) to make origin the centre.
+\[\begin{aligned}
+    (1+e)\left(x+\frac{de}{1-e}\right)\left((1-e)\left(x+\frac{de}{1-e}\right)-2de\right)+y^2&=0\\
+    \left((1+e)x+de\frac{1+e}{1-e}\right)((1-e)x+de-2de)+y^2&=0\\
+    \frac{1+e}{1-e}((1-e)x+de)((1-e)x-de)+y^2&=0\\
+    \frac{1+e}{1-e}\left((1-e)^2x^2-d^2e^2\right)+y^2&=0\\
+    (1-e)(1+e)x-d^2e^2\frac{1+e}{1-e}+y^2&=0\\
+    (1-e)(1+e)x+y^2&=d^2e^2\frac{1+e}{1-e}\\
+    \frac{(1-e)(1+e)x}{d^2e^2\frac{1+e}{1-e}}+\frac{y^2}{d^2e^2\frac{1+e}{1-e}}&=1\\
+    \frac{x^2}{\frac{d^2e^2}{(1-e)^2}}+\frac{y^2}{\frac{d^2e^2}{(1-e)^2}(1-e)(1+e)}&=1\\
+    \frac{x^2}{\left(\frac{de}{1-e}\right)^2}+\frac{y^2}{\left(\frac{de}{1-e}\right)^2\left(1-e^2\right)}&=1\\
+\end{aligned}\]
+Notice that the semi-major axis, \(a=\frac{de}{1-e}\), as it is the distance from leftmost vertex to the centre of the locus of points.
+
+For \(0<e<1\),
+\[\frac{x^2}{a^2}+\frac{y^2}{a^2\left(1-e^2\right)}=1\implies b^2=a^2\left(1-e^2\right)\]
+OR
+
+For \(e>1\),
+\[\frac{x^2}{a^2}-\frac{y^2}{a^2\left(e^2-1\right)}=1\implies b^2=a^2\left(e^2-1\right)\]
+
+
+Focus is at:
+\[x=de-a=a(1-e)-a=a-ae-a=-ae\]
+
+Similarly, directrix is at:
+\[x=-d-a=-a\frac{(1-e)}e-a=-\frac ae+a-a=-\frac ae\]
+\end{document}

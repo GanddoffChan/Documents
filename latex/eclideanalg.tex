@@ -1,0 +1,108 @@
+\documentclass[a4paper]{article}
+
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage[margin=1in]{geometry}
+\author{\(\mathbb{GONDRO}\)}
+\title{Euclidean Algorithm}
+
+\begin{document}
+\maketitle
+\section{Proof}
+Suppose \(a\) and \(b\) are positive integers.
+By \emph{Euclidean division lemma},
+\[(\forall a,b\in\mathbb Z)(b\ne0)(\exists b,r\in\mathbb Z)(0\leqslant r<|b|)(a=bq+r)\]
+Thus,
+\[(\exists b,r\in\mathbb Z)(0\leqslant r<|b|)(a=bq+r\land r=a-bq)\]
+Let \(h=\gcd(a,b)\) and \(g=\gcd(b,r)\).
+\[\begin{aligned}
+    g&=\gcd(b,r)\\
+    \implies g\mid b&\land g\mid r\\
+    \implies (\exists m,n\in\mathbb Z)(gm=b&\land gn=r)\\
+    \implies gqm=bq&\land gn=r\\
+    \implies gqm+gn&=bq+r\\
+    \implies g(qm+n)&=bq+r\\
+    \implies g&\mid bq+r\\
+    \implies g&\mid a
+\end{aligned}\]
+\[g\mid a\land g\mid b\implies g\mid h\implies g\leqslant h\]
+
+\[\begin{aligned}
+    h&=\gcd(a,b)\\
+    \implies h\mid a&\land h\mid b\\
+    \implies (\exists m,n\in\mathbb Z)(hk=a&\land hj=b)\\
+    \implies hk=a&\land hqj=qb\\
+    \implies hk-hqj&=a-qb\\
+    \implies h(k-qj)&=a-qb\\
+    \implies h&\mid a-qb\\
+    \implies h&\mid r
+\end{aligned}\]
+\[h\mid b\land h\mid r\implies h\mid g\implies h\leqslant g\]
+
+\[g\leqslant h\land h\leqslant g\implies h=g\]
+
+\[\therefore a=bq+r\implies\gcd(a,b)=\gcd(b,r)\qed\]
+
+\section{Example Application}
+Compute \(\gcd(2322,654)\).
+
+\[\begin{array}{c|c}
+\begin{aligned}
+    &\gcd(2322,654)\\
+    &=\gcd(654,360)\\
+    &=\gcd(360,294)\\
+    &=\gcd(294,66)\\
+    &=\gcd(66,30)\\
+    &=\gcd(30,6)\\
+    &=\boxed6
+\end{aligned}
+    &
+\begin{aligned}
+    2322&=654\cdot3+360\\
+    654&=360\cdot1+294\\
+    360&=294\cdot1+66\\
+    294&=66\cdot4+30\\
+    66&=30\cdot2+6\\
+    30&=6\cdot5+0
+\end{aligned}
+\end{array}\]
+Solve for all integer solutions of \(2322x+654y=\gcd(2322,654)\).\\
+By rearranging the equations above,
+\[\begin{aligned}
+    360&=2322-654\cdot3\\
+    294&=654-360\cdot1\\
+    66&=360-294\cdot1\\
+    30&=294-66\cdot4\\
+    6&=66-30\cdot2
+\end{aligned}\]
+
+\[\begin{aligned}
+    \gcd(2322,654)&=6\\
+    &=66-30\cdot2\\
+    &=66-(294-66\cdot4)\cdot2\\
+    &=66-294\cdot2+66\cdot8\\
+    &=66\cdot9-294\cdot2\\
+    &=(360-294\cdot1)\cdot9-294\cdot2\\
+    &=360\cdot9-294\cdot9-294\cdot2\\
+    &=360\cdot9-294\cdot11\\
+    &=360\cdot9-(654-360\cdot1)\cdot11\\
+    &=360\cdot9-654\cdot11+360\cdot11\\
+    &=360\cdot20-654\cdot11\\
+    &=(2322-654\cdot3)\cdot20-654\cdot11\\
+    &=2322\cdot20-654\cdot60-654\cdot11\\
+    &=2322\cdot20-654\cdot71
+\end{aligned}\]
+
+\[2322(20)+654(-71)=\gcd(2322,654)\]
+Now solve for the homogeneous case: \(2322x+654y=0\).\\
+Notice that \(2322=6\cdot387\) and \(654=6\cdot109\).\\
+Hence, the lowest common multiple of 2322 and 654 is \(6\cdot109\cdot387\).\\
+Thus, \(2322(109t)+654(-387t)=0\)
+
+\[\therefore2322(20+109t)+654(-71-387t)=\gcd(2322,654)\]
+
+\[\begin{cases}
+    x=\boxed{20+109t}\\
+    y=\boxed{-71-387t}
+\end{cases}
+,\,t\in\mathbb Z\]
+\end{document}
